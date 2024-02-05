@@ -29,7 +29,7 @@
 
     </head>
     <body class="d-flex flex-column min-vh-100" style="height: 100%">
-       <?php include 'navbarADM.php' ?>
+       <?php include 'navbarOWN.php' ?>
        
 <section class="py-5">
 <?php 
