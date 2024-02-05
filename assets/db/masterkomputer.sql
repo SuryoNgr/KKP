@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 05, 2024 at 03:25 PM
+-- Generation Time: Feb 05, 2024 at 03:59 PM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 8.0.13
 
@@ -71,7 +71,8 @@ INSERT INTO `login` (`id_user`, `nama`, `no_telp`, `alamat`, `username`, `passwo
 (18, 'Alif', '02154848777', 'Jl.gassparah', 'alif', 'gass', 'user'),
 (19, 'Rakel', '025487756884', 'Jl.KemayoranGass', 'rakel', 'gass', 'user'),
 (20, 'Nugroho', '0980', 'sdasd', 'nugroho', 'user', 'user'),
-(21, 'owner', 'owner', 'owner', 'owner', 'owner', 'owner');
+(21, 'owner', 'owner', 'owner', 'owner', 'owner', 'owner'),
+(24, 'admincoba', '20202020', 'sdasdasdssss', 'admin2', 'admin', 'admin');
 
 -- --------------------------------------------------------
 
@@ -162,7 +163,7 @@ ALTER TABLE `cart`
 -- AUTO_INCREMENT for table `login`
 --
 ALTER TABLE `login`
-  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 
 --
 -- AUTO_INCREMENT for table `payments`
