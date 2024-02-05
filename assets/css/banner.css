@@ -1,0 +1,21 @@
+
+.object-fit-cover {
+  object-fit: cover;
+  object-position: center;
+}
+    body {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+    }
+
+    .container {
+        flex: 1;
+    }
+
+    footer {
+        flex-shrink: 0;
+        color: #fff;
+        background-color: #343a40;
+        padding: 20px 0;
+    }

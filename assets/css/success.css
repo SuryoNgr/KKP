@@ -1,0 +1,45 @@
+ body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+
+         .payment-success {
+            display: flex;
+            flex-direction: column;
+            
+            max-width: 500px; 
+            margin: 0 auto; 
+            background-color: #f0eeee;
+            border: 1px solid #000;
+            padding: 20px;
+        }
+        .print-btn-container {
+            display: flex;
+            justify-content: flex-end;
+            margin-bottom: 20px;
+        }
+
+        .payment-success h2 {
+            margin-bottom: 20px;
+        }
+
+        .payment-success p {
+            margin-bottom: 10px;
+        }
+
+        .back-btn {
+            margin-top: 20px;
+        }
+        /* Footer */
+        footer {
+            margin-top: auto;
+            background-color: #343a40;
+            color: #f8f9fa;
+            padding: 20px 0;
+        }
+
+        .footer-text {
+            font-size: 14px;
+        }

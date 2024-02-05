@@ -1,0 +1,9 @@
+.product-image {
+            width: 350px;
+            float: left;
+            margin-right: 20px;
+            align-content: center;
+        }
+.product-details {
+            margin-left: 370px;
+        }
