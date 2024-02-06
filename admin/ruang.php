@@ -30,10 +30,58 @@
     </head>
     <body class="d-flex flex-column min-vh-100" style="height: 100%">
        <?php include 'navbarADM.php' ?>
+       <center><h1>Daftar Ruangan</h1></center>
        
 <section class="py-5">
 
+    <?php 
+    if(isset($_GET['cari'])){
+        $cari = $_GET['cari'];
+    }?>
+    <div class="container px-4 px-lg-5 mt-5">
+        <?php
+        if (isset($_GET['cari'])) {
+            $cari = $_GET['cari'];
+            $sql = mysqli_query($koneksi,"select * from produk where nama like '%".$cari."%'");
+        } else {
+            $sql = mysqli_query($koneksi, "SELECT * FROM produk ORDER BY id_produk ASC LIMIT 9");
+        }
+        $count = 0;
+        ?>
+        <div class="row">
+            <?php
+            while ($data = mysqli_fetch_assoc($sql)) {
+                $count++;
+            ?>
+
+            <div class="card bg-light mb-4">
+                    <div >
+                        <div class="col-md-4">
+                        <img style="margin: 10px" src="<?php echo $data['gambar']; ?>" class="card-img-top product-image" alt="Product Image">
+                        </div>
+                        <div class="col-md-6 product-details">
+                            <div class="card-body py-4">
+                                <h5 class="card-title"><?php echo $data['nama']; ?></h5>
+                                <p class="card-text"><strong>Harga:</strong> Rp. <?php echo number_format($data['harga'], 2, ",", "."); ?></p>
+                                <p class="card-text"><strong>Stock:</strong> <?php echo number_format($data['stok']); ?></p>
+                                <p class="card-text"><strong>Status:</strong> <?php echo $data['deskripsi']; ?></p>
+                                <!-- masih tunggu besok -->
+
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            <?php
+            }
+            ?>
+        </div>
+    </div>
 </section>
+
+
+
 
       
 
