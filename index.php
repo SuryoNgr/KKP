@@ -1,8 +1,9 @@
 <!doctype html>
 <html lang="en">
     <head>
-        <title>Nama Hotelnya</title>
+        <title>Hotel Blue Horizon</title>
         <!-- Required meta tags -->
+        <link rel="icon" href="assets/images/index/iconLogo.png" >
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -24,7 +25,6 @@
     </head>
 
     <body> 
-    <!-- 👇 ini header navigasibar 👇 -->
     <!-- header -->
     <header class="header">
         <div class="logo">
@@ -34,8 +34,8 @@
             <ul>
                 <li><a style="text-decoration:none" href="index.php#home">Home</a></li>
                 <li><a style="text-decoration:none" href="index.php#Facility">Facility</a></li>
-                <li><a style="text-decoration:none" href="pemesanan.html">Room</a></li>
-                <li><a style="text-decoration:none" href="pemesanan.html">Book now</a></li>
+                <li><a style="text-decoration:none" href="pemesanan.php">Room</a></li>
+                <li><a style="text-decoration:none" href="pemesanan.php">Book now</a></li>
                 <li><a style="text-decoration:none" href="#information">Information</a>
                     <ul>
                         <li><a style="text-decoration:none" href="contact-us.html">Contact us</a></li>
