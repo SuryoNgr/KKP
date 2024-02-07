@@ -32,62 +32,7 @@
        <?php include 'navbarOWN.php' ?>
        
 <section class="py-5">
-<?php 
-    if(isset($_GET['cari'])){
-        $cari = $_GET['cari'];
-    
-    }?>
 
-        <div class="container px-4 px-lg-5 mt-5">
-            <div class="row gx-4 gx-lg-5">
-                <?php
-                if (isset($_GET['cari'])) {
-                $cari = $_GET['cari'];
-                $sql = mysqli_query($koneksi,"select * from produk where nama like '%".$cari."%'");
-            }else{
-            $sql = mysqli_query($koneksi, "SELECT * FROM produk ORDER BY id_produk ASC LIMIT 9");
-            }
-            $count = 0;
-            while ($data = mysqli_fetch_assoc($sql)) {
-            $count++;
-            ?>
-            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
-                
-                    <div class="card h-100">
-                        <!-- Product image-->
-                        <div class="card-img-container">
-                            <img src="<?php echo $data['gambar']; ?>" class="card-img" alt="<?php echo $data['nama']; ?>">
-                        </div>
-                        <!-- Product details-->
-                        <div class="card-body p-4">
-                            <div class="text-center">
-                                <!-- Product name-->
-                                <div class="title">
-                                    <h5><?php echo $data['nama']; ?></h5>
-                                </div>
-                                
-                            </div>
-                        </div>
-                       <!-- Product actions-->
-                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                        <div class="text-center">
-                             <!-- Product price-->
-                            <div><h6>Rp.<?php echo number_format($data['harga'], 2, ",", "."); ?></h6></div>
-                            <!-- Product Stock-->
-                            <div><h6>Stock = <b><?php echo number_format($data['stok']); ?></b></h6></div>
-                            <a href="detailprodukADM.php?id=<?php echo $data['id_produk']; ?>" class="btn btn-lg btn-outline-success">Detail &raquo;</a>
-                            <a href="hapusprodukADM.php?id=<?php echo $data['id_produk']; ?>" class="btn btn-lg btn-outline-danger">Hapus</a>
-                        </div>
-                    </div>
-                    </div>
-        
-            </div>
-            <?php
-                    }
-
-            ?>
-        </div>
-    </div>
 
 </section>
 

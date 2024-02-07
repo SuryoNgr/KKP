@@ -18,7 +18,7 @@ $cek = mysqli_num_rows($login);
 
 if($cek > 0){
     $data = mysqli_fetch_assoc($login);
-    $_SESSION['user_id'] = $data['id_user'];
+    $_SESSION['user_id'] = $data['id_admin'];
 
 
     if($data['level'] == "admin"){
@@ -28,16 +28,6 @@ if($cek > 0){
         
 
         header("location:admin/halaman_admin.php");
-        exit();
-    }
-
-    else if($data['level'] == "user"){
-
-        $_SESSION['username'] = $username;
-        $_SESSION['level'] = "user";
-
-
-        header("location:user/halaman_user.php");
         exit();
     }
     else if($data['level'] == "owner"){

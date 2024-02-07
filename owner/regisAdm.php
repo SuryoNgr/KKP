@@ -92,13 +92,7 @@
 						</span>
 					</div>
 
-					<div class="wrap-input100 validate-input">
-						<input type="text" name="address" class="input100" placeholder="Address" required="required">
-						<span class="focus-input100"></span>
-						<span class="symbol-input100">
-							<i class="fa fa-map-marker" aria-hidden="true"></i>
-						</span>
-					</div>
+					
 					
 					<div class="container-login100-form-btn">
 						<button type="submit" name="submit" class="login100-form-btn">
