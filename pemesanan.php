@@ -371,7 +371,7 @@
 
 
          <script>
-      document.addEventListener("DOMContentLoaded", function() {
+    document.addEventListener("DOMContentLoaded", function() {
         var roomsSelect = document.getElementById("rooms");
         var roomTypeContainer = document.querySelector(".room-type-container");
 
@@ -479,6 +479,8 @@
    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
    <script src="js/pscript.js"></script>
+   <script src="js/coba.js"></script>
+
 
 
 
