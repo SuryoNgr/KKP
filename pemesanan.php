@@ -371,7 +371,7 @@
 
 
          <script>
-    document.addEventListener("DOMContentLoaded", function() {
+      document.addEventListener("DOMContentLoaded", function() {
         var roomsSelect = document.getElementById("rooms");
         var roomTypeContainer = document.querySelector(".room-type-container");
 
