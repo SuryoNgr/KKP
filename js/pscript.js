@@ -141,7 +141,6 @@ function showSweetAlert(title, text, icon) {
 
 
 //tambah ruang pilihan ruang bertambah
-
 document.addEventListener("DOMContentLoaded", function() {
         var roomsSelect = document.getElementById("rooms");
         var roomTypeContainer = document.querySelector(".room-type-container");

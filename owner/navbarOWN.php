@@ -14,6 +14,7 @@
                         <li class="nav-item"><b><a class="nav-link active" aria-current="page" href="halaman_owner.php">Home</a></b></li>
                         <li class="nav-item"><a class="nav-link" href="laporan.php">Cetak Laporan</a></li>
                         <li class="nav-item"><a class="nav-link" href="regisADM.php">Daftar Staff</a></li>
+                         <li class="nav-item"><a class="nav-link" href="ruang.php">Ruangan</a></li>
                     </ul>
 
                    </div>
