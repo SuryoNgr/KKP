@@ -29,12 +29,12 @@
             <ul>
                 <li><a style="text-decoration:none" href="index.php#home">Home</a></li>
                 <li><a style="text-decoration:none" href="index.php#Facility">Facility</a></li>
-                <li><a style="text-decoration:none" href="pemesanan.html">Room</a></li>
-                <li><a style="text-decoration:none" href="pemesanan.html">Book now</a></li>
+                <li><a style="text-decoration:none" href="pemesanan.php">Room</a></li>
+                <li><a style="text-decoration:none" href="pemesanan.php">Book now</a></li>
                 <li><a style="text-decoration:none" href="#information">Information</a>
                     <ul>
-                        <li><a style="text-decoration:none" href="contact-us.html">Contact us</a></li>
-                        <li><a style="text-decoration:none" href="about-us.html">About us</a></li>
+                        <li><a style="text-decoration:none" href="contact-us.php">Contact us</a></li>
+                        <li><a style="text-decoration:none" href="about-us.php">About us</a></li>
                     </ul>
                 </li>
             </ul>
