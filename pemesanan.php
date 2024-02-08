@@ -142,9 +142,8 @@
                   <img src="assets/images/index/room-2.jpg" alt="">
                </div>
                <div class="content">
-                  <h3>familiy room</h3>
-                  <p>designed to accommodate families. With spacious space and child-friendly facilities,
-                     this room is suitable for families who want to enjoy quality time together in comfort and luxury.
+                  <h3>Basic Room</h3>
+                  <p> Designed for practical comfort, this room offers essential amenities for a restful stay, perfect for budget-conscious travelers seeking simplicity and convenience.
                   </p>
                   <a href="#reservation" class="btn">book now</a>
                </div>
@@ -358,7 +357,7 @@
                <p>room type <span>*</span></p>
                <select name="type" class="input" id="type_room">
                   <option value="Exclusive">exclusive rooms</option>
-                  <option value="family">family rooms</option>
+                  <option value="Basic">basic room</option>
                   <option value="daily">daily rooms</option>
                   <option value="Panoramic">panoramic rooms</option>
                   <option value="Honey">honey rooms</option>

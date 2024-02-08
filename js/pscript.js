@@ -157,7 +157,7 @@ document.addEventListener("DOMContentLoaded", function() {
                     <p>room type ${i + 1} <span>*</span></p>
                     <select name="type${i + 1}" class="input" id="type_room_${i + 1}">
                         <option value="Exclusive">exclusive rooms</option>
-                        <option value="family">family rooms</option>
+                        <option value="basic">basic rooms</option>
                         <option value="daily">daily rooms</option>
                         <option value="Panoramic">panoramic rooms</option>
                         <option value="Honey">honey rooms</option>
