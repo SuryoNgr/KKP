@@ -176,3 +176,110 @@ document.addEventListener("DOMContentLoaded", function() {
             addRoomTypeBoxes(numRooms);
         });
     });
+
+    // membatasi pengunjung
+    document.addEventListener("DOMContentLoaded", function() {
+      var personSelect = document.getElementById("person");
+      var roomsSelect = document.getElementById("rooms");
+
+      // Nonaktifkan opsi 'rooms' saat halaman dimuat
+      roomsSelect.disabled = true;
+
+      // Tambahkan event listener untuk perubahan pada pilihan 'pengunjung'
+      personSelect.addEventListener("change", function() {
+          var selectedPerson = parseInt(this.value);
+          // Jika pengunjung dipilih selain "None person", maka aktifkan opsi 'rooms'
+          if (selectedPerson !== "NONE") {
+              roomsSelect.disabled = false;
+              // Panggil fungsi untuk membatasi opsi 'rooms'
+              limitRoomOptions(selectedPerson);
+          } else {
+              roomsSelect.value = "NONE"; // Set kembali opsi 'rooms' menjadi "Pilih Room"
+              roomsSelect.disabled = true;
+          }
+      });
+
+      // Fungsi untuk membatasi opsi 'rooms' berdasarkan jumlah pengunjung
+      function limitRoomOptions(selectedPerson) {
+          var selectedRooms = parseInt(roomsSelect.value);
+          // Jika pengunjung berjumlah 3-4, maka opsi 'rooms' dengan value 1 akan dinonaktifkan
+          if (selectedPerson >= 3 && selectedPerson <= 4) {
+              disableOptions(roomsSelect, 1);
+          }
+          // Jika pengunjung berjumlah 5-6, maka opsi 'rooms' dengan value 1-3 akan dinonaktifkan
+          else if (selectedPerson >= 5 && selectedPerson <= 6) {
+              disableOptions(roomsSelect, 1);
+              disableOptions(roomsSelect, 2);
+              disableOptions(roomsSelect, 3);
+          }
+          // Jika jumlah pengunjung lainnya, aktifkan kembali semua opsi 'rooms'
+          else {
+              enableAllOptions(roomsSelect);
+          }
+      }
+
+      // Fungsi untuk menonaktifkan opsi pada elemen select
+      function disableOptions(selectElement, value) {
+          var option = selectElement.querySelector("option[value='" + value + "']");
+          if (option) {
+              option.disabled = true;
+          }
+      }
+
+      // Fungsi untuk mengaktifkan kembali semua opsi pada elemen select
+      function enableAllOptions(selectElement) {
+          for (var i = 0; i < selectElement.options.length; i++) {
+              selectElement.options[i].disabled = false;
+          }
+      }
+  });
+
+  // mengatur tanggal
+  document.addEventListener("DOMContentLoaded", function() {
+    var checkinInput = document.getElementById("checkin");
+    var checkoutInput = document.getElementById("checkout");
+
+    // Mendapatkan tanggal saat ini
+    var today = new Date();
+    var dd = String(today.getDate()).padStart(2, '0');
+    var mm = String(today.getMonth() + 1).padStart(2, '0'); // Januari dimulai dari 0
+    var yyyy = today.getFullYear();
+    var tomorrow = new Date(today);
+    tomorrow.setDate(tomorrow.getDate() + 1);
+
+    // Mengatur nilai tanggal pada input 'check in' dan 'check out'
+    checkinInput.value = yyyy + '-' + mm + '-' + dd;
+    checkoutInput.value = tomorrow.toISOString().slice(0, 10);
+
+    // Memeriksa perubahan pada input 'check in' dan 'check out'
+    checkinInput.addEventListener("change", function() {
+        var checkinDate = new Date(this.value);
+        var checkoutDate = new Date(checkoutInput.value);
+
+        // Memeriksa apakah tanggal 'check out' lebih awal dari tanggal 'check in'
+        if (checkinDate >= checkoutDate) {
+            // Jika ya, atur tanggal 'check out' menjadi satu hari setelah tanggal 'check in'
+            checkoutDate.setDate(checkinDate.getDate() + 1);
+            checkoutInput.value = checkoutDate.toISOString().slice(0, 10);
+        }
+
+        // Memeriksa apakah tanggal 'check in' lebih kecil atau sama dengan tanggal hari ini
+        var todayDate = new Date();
+        if (checkinDate <= todayDate) {
+            // Jika ya, atur tanggal 'check in' menjadi tanggal hari ini
+            this.value = todayDate.toISOString().slice(0, 10);
+        }
+    });
+
+    checkoutInput.addEventListener("change", function() {
+        var checkinDate = new Date(checkinInput.value);
+        var checkoutDate = new Date(this.value);
+
+        // Memeriksa apakah tanggal 'check out' lebih awal dari tanggal 'check in'
+        if (checkoutDate <= checkinDate) {
+            // Jika ya, atur tanggal 'check in' menjadi satu hari sebelum tanggal 'check out'
+            checkinDate.setDate(checkoutDate.getDate() - 1);
+            checkinInput.value = checkinDate.toISOString().slice(0, 10);
+        }
+    });
+});

@@ -21,7 +21,7 @@
 
    <!-- header -->
 
-   <<header class="header">
+   <header class="header">
         <div class="logo">
             <img src="assets/images/index/BlueHorizonWhite.png" alt="LogoResort" width="75%">
         </div>
@@ -332,18 +332,19 @@
                <p>pengunjung <span>*</span></p>
                <select name="Person" class="input" id="person">
                   <option value="NONE">None person</option>
-                  <option value="PERSON_1">1 person</option>
-                  <option value="PERSON_2">2 person</option>
-                  <option value="PERSON_3">3 person</option>
-                  <option value="PERSON_4">4 person</option>
-                  <option value="PERSON_5">5 person</option>
-                  <option value="PERSON_6">6 person</option>
+                  <option value="1">1 person</option>
+                  <option value="2">2 person</option>
+                  <option value="3">3 person</option>
+                  <option value="4">4 person</option>
+                  <option value="5">5 person</option>
+                  <option value="6">6 person</option>
                </select>
             </div>
 
             <div class="box">
                <p>rooms <span>*</span></p>
                <select name="rooms" class="input" id="rooms">
+               <option value="NONE">Pilih Room</option>
                   <option value="1">1 rooms</option>
                   <option value="2">2 rooms</option>
                   <option value="3">3 rooms</option>
