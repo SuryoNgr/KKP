@@ -75,9 +75,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <title>Add Room</title>
 </head>
 <body>
+     <a href="ruang.php">kembali</a><br>
     <h2>Add Room</h2>
     <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
-        
+       
 
         <label for="tipe_room">Room Type:</label>
         <select name="tipe_kamar" class="input" id="type_room">
