@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.0
+-- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 07, 2024 at 04:51 PM
--- Server version: 10.4.27-MariaDB
--- PHP Version: 7.4.33
+-- Generation Time: Feb 08, 2024 at 06:29 PM
+-- Server version: 10.4.22-MariaDB
+-- PHP Version: 8.0.13
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -34,7 +34,15 @@ CREATE TABLE `login` (
   `username` varchar(20) NOT NULL,
   `password` varchar(20) NOT NULL,
   `level` varchar(10) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `login`
+--
+
+INSERT INTO `login` (`id_admin`, `nama_admin`, `notelp_admin`, `username`, `password`, `level`) VALUES
+(1, 'owner', 'owner', 'owner', 'owner', 'owner'),
+(2, 'budi', 'admin', 'admin1', 'admin', 'admin');
 
 -- --------------------------------------------------------
 
@@ -53,7 +61,7 @@ CREATE TABLE `payment` (
   `tipe_room` varchar(10) NOT NULL,
   `id_room` varchar(10) NOT NULL,
   `harga_total` int(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -65,7 +73,7 @@ CREATE TABLE `pelanggan` (
   `norek_pl` varchar(20) NOT NULL,
   `nama_pl` varchar(30) NOT NULL,
   `harga_keseluruhan` int(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -76,8 +84,19 @@ CREATE TABLE `pelanggan` (
 CREATE TABLE `room` (
   `id_room` varchar(10) NOT NULL,
   `tipe_room` varchar(10) NOT NULL,
-  `harga_room` int(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+  `harga_room` int(100) NOT NULL,
+  `status` varchar(10) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `room`
+--
+
+INSERT INTO `room` (`id_room`, `tipe_room`, `harga_room`, `status`) VALUES
+('ER001', 'Exclusive', 3500000, 'Available'),
+('DR001', 'Daily', 1000000, 'Available'),
+('PR001', 'Panoramic', 2000000, 'Available'),
+('HR001', 'Honey', 4000000, 'Available');
 
 --
 -- Indexes for dumped tables
@@ -109,7 +128,7 @@ ALTER TABLE `pelanggan`
 -- AUTO_INCREMENT for table `login`
 --
 ALTER TABLE `login`
-  MODIFY `id_admin` int(10) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_admin` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `payment`

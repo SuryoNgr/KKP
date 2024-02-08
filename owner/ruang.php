@@ -41,7 +41,7 @@
             <th>Room Type</th>
             <th>Harga/malam</th>
             <th>Status</th>
-            <th rowspan="1">Action</th> 
+            <th colspan="2">Action</th> 
         </tr>
         <?php
     
@@ -56,7 +56,7 @@
                 echo "<td>" . $row["harga_room"] . "</td>";
                 echo "<td>" . $row["status"] . "</td>";
                 echo "<td><a href='ubah_status.php?id=" . $row["id_room"] . "'>Ubah Status</a></td>"; 
-                 echo "<td><form method='post'><input type='hidden' name='hapus_id' value='" . $row["id_room"] . "'><button type='submit'>Hapus</button></form></td>";
+                echo "<td><form method='post'><input type='hidden' name='hapus_id' value='" . $row["id_room"] . "'><button type='submit'>Hapus</button></form></td>";
                 echo "</tr>";
             }
         } else {
