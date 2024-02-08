@@ -370,8 +370,7 @@
          <input type="submit" value="booking now" class="btn">
 
 
-
-
+   
       </form>
 
    </section>
@@ -444,8 +443,6 @@
    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
    <script src="js/pscript.js"></script>
-   <script src="js/coba.js"></script>
-
 
 
 
