@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 08, 2024 at 06:29 PM
+-- Generation Time: Feb 12, 2024 at 03:39 PM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 8.0.13
 
@@ -93,10 +93,31 @@ CREATE TABLE `room` (
 --
 
 INSERT INTO `room` (`id_room`, `tipe_room`, `harga_room`, `status`) VALUES
-('ER001', 'Exclusive', 3500000, 'Available'),
+('BR001', 'Basic', 500000, 'Available'),
+('BR002', 'Basic', 500000, 'Available'),
+('BR003', 'Basic', 500000, 'Available'),
+('BR004', 'Basic', 500000, 'Available'),
+('BR005', 'Basic', 500000, 'Available'),
 ('DR001', 'Daily', 1000000, 'Available'),
-('PR001', 'Panoramic', 2000000, 'Available'),
-('HR001', 'Honey', 4000000, 'Available');
+('DR002', 'Daily', 1000000, 'Available'),
+('DR003', 'Daily', 1000000, 'Available'),
+('DR004', 'Daily', 1000000, 'Available'),
+('DR005', 'Daily', 1000000, 'Available'),
+('PR001', 'Panoramic', 1500000, 'Available'),
+('PR002', 'Panoramic', 1500000, 'Available'),
+('PR003', 'Panoramic', 1500000, 'Available'),
+('PR004', 'Panoramic', 1500000, 'Available'),
+('PR005', 'Panoramic', 1500000, 'Available'),
+('ER001', 'Exclusive', 2000000, 'Available'),
+('ER002', 'Exclusive', 2000000, 'Available'),
+('ER003', 'Exclusive', 2000000, 'Available'),
+('ER004', 'Exclusive', 2000000, 'Available'),
+('ER005', 'Exclusive', 2000000, 'Available'),
+('HR001', 'Honey', 2500000, 'Available'),
+('HR002', 'Honey', 2500000, 'Available'),
+('HR003', 'Honey', 2500000, 'Available'),
+('HR004', 'Honey', 2500000, 'Available'),
+('HR005', 'Honey', 2500000, 'Available');
 
 --
 -- Indexes for dumped tables
