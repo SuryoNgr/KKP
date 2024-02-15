@@ -178,62 +178,61 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // membatasi pengunjung
     document.addEventListener("DOMContentLoaded", function() {
-      var personSelect = document.getElementById("person");
-      var roomsSelect = document.getElementById("rooms");
+        var personSelect = document.getElementById("person");
+        var roomsSelect = document.getElementById("rooms");
 
-      // Nonaktifkan opsi 'rooms' saat halaman dimuat
-      roomsSelect.disabled = true;
+        // Nonaktifkan opsi 'rooms' saat halaman dimuat
+        roomsSelect.disabled = true;
 
-      // Tambahkan event listener untuk perubahan pada pilihan 'pengunjung'
-      personSelect.addEventListener("change", function() {
-          var selectedPerson = parseInt(this.value);
-          // Jika pengunjung dipilih selain "None person", maka aktifkan opsi 'rooms'
-          if (selectedPerson !== "NONE") {
-              roomsSelect.disabled = false;
-              // Panggil fungsi untuk membatasi opsi 'rooms'
-              limitRoomOptions(selectedPerson);
-          } else {
-              roomsSelect.value = "NONE"; // Set kembali opsi 'rooms' menjadi "Pilih Room"
-              roomsSelect.disabled = true;
-          }
-      });
+        // Tambahkan event listener untuk perubahan pada pilihan 'pengunjung'
+        personSelect.addEventListener("change", function() {
+            var selectedPerson = parseInt(this.value);
+            // Jika pengunjung dipilih selain "None person", maka aktifkan opsi 'rooms'
+            if (selectedPerson !== "NONE") {
+                roomsSelect.disabled = false;
+                // Panggil fungsi untuk membatasi opsi 'rooms'
+                limitRoomOptions(selectedPerson);
+            } else {
+                roomsSelect.value = "NONE"; // Set kembali opsi 'rooms' menjadi "Pilih Room"
+                roomsSelect.disabled = true;
+            }
+        });
 
-      // Fungsi untuk membatasi opsi 'rooms' berdasarkan jumlah pengunjung
-      function limitRoomOptions(selectedPerson) {
-          var selectedRooms = parseInt(roomsSelect.value);
-          // Jika pengunjung berjumlah 3-4, maka opsi 'rooms' dengan value 1 akan dinonaktifkan
-          if (selectedPerson >= 3 && selectedPerson <= 4) {
-              disableOptions(roomsSelect, 1);
-          }
-          // Jika pengunjung berjumlah 5-6, maka opsi 'rooms' dengan value 1-3 akan dinonaktifkan
-          else if (selectedPerson >= 5 && selectedPerson <= 6) {
-              disableOptions(roomsSelect, 1);
-              disableOptions(roomsSelect, 2);
-              disableOptions(roomsSelect, 3);
-          }
-          // Jika jumlah pengunjung lainnya, aktifkan kembali semua opsi 'rooms'
-          else {
-              enableAllOptions(roomsSelect);
-          }
-      }
+        // Fungsi untuk membatasi opsi 'rooms' berdasarkan jumlah pengunjung
+        function limitRoomOptions(selectedPerson) {
+            var selectedRooms = parseInt(roomsSelect.value);
+            // Jika pengunjung berjumlah 3-4, maka opsi 'rooms' dengan value 1 akan dinonaktifkan
+            if (selectedPerson >= 3 && selectedPerson <= 4) {
+                disableOptions(roomsSelect, 1);
+            }
+            // Jika pengunjung berjumlah 5-6, maka opsi 'rooms' dengan value 1-3 akan dinonaktifkan
+            else if (selectedPerson >= 5 && selectedPerson <= 6) {
+                disableOptions(roomsSelect, 1);
+                disableOptions(roomsSelect, 2);
+            }
+            // Jika jumlah pengunjung lainnya, aktifkan kembali semua opsi 'rooms'
+            else {
+                enableAllOptions(roomsSelect);
+            }
+        }
 
-      // Fungsi untuk menonaktifkan opsi pada elemen select
-      function disableOptions(selectElement, value) {
-          var option = selectElement.querySelector("option[value='" + value + "']");
-          if (option) {
-              option.disabled = true;
-          }
-      }
+        // Fungsi untuk menonaktifkan opsi pada elemen select
+        function disableOptions(selectElement, value) {
+            var option = selectElement.querySelector("option[value='" + value + "']");
+            if (option) {
+                option.disabled = true;
+            }
+        }
 
-      // Fungsi untuk mengaktifkan kembali semua opsi pada elemen select
-      function enableAllOptions(selectElement) {
-          for (var i = 0; i < selectElement.options.length; i++) {
-              selectElement.options[i].disabled = false;
-          }
-      }
-  });
+        // Fungsi untuk mengaktifkan kembali semua opsi pada elemen select
+        function enableAllOptions(selectElement) {
+            for (var i = 0; i < selectElement.options.length; i++) {
+                selectElement.options[i].disabled = false;
+            }
+        }
+    });
 
-  // mengatur tanggal
+     // mengatur tanggal
   document.addEventListener("DOMContentLoaded", function() {
     var checkinInput = document.getElementById("checkin");
     var checkoutInput = document.getElementById("checkout");

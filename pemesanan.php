@@ -1,36 +1,3 @@
-<?php
-// Set time zone
-date_default_timezone_set('Asia/Jakarta');
-
-// Set tanggal checkin sebagai tanggal saat ini
-$checkin_date = date("Y-m-d");
-
-// Set tanggal checkout sebagai 1 hari setelahnya
-$checkout_date = date("Y-m-d", strtotime("+1 day"));
-
-
-function calculateRoomRate($roomType, $checkinDate, $checkoutDate) {
-    // Logika perhitungan harga kamar berdasarkan tipe kamar, periode waktu, dan faktor-faktor lainnya
-    // Implementasikan logika perhitungan harga sesuai dengan kebutuhan bisnis Anda
-    // Contoh: Jika ingin mengembalikan harga kamar berdasarkan tipe kamar tertentu, Anda dapat menggunakan pernyataan switch atau if-else
-    switch ($roomType) {
-        case "Exclusive":
-            // Logika perhitungan harga kamar untuk tipe kamar Exclusive
-            // Misalnya, Anda dapat mengembalikan harga tertentu berdasarkan periode waktu
-            return 200; // Contoh: Harga kamar Exclusive adalah $200 per malam
-            break;
-        case "Family":
-            // Logika perhitungan harga kamar untuk tipe kamar Family
-            return 150; // Contoh: Harga kamar Family adalah $150 per malam
-            break;
-        // Tambahkan kasus lainnya sesuai dengan tipe kamar yang Anda miliki
-        default:
-            // Default harga kamar jika tipe kamar tidak dikenali
-            return 100; // Contoh: Harga kamar default adalah $100 per malam
-            break;
-    }
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -364,6 +331,7 @@ function calculateRoomRate($roomType, $checkinDate, $checkoutDate) {
          <div class="box">
             <p>pengunjung <span>*</span></p>
             <select name="jumlah_tamu" class="input" id="person">
+               <option value="None">None</option>
                <option value="1">1 person</option>
                <option value="2">2 person</option>
                <option value="3">3 person</option>
@@ -376,24 +344,28 @@ function calculateRoomRate($roomType, $checkinDate, $checkoutDate) {
          <div class="box">
             <p>rooms <span>*</span></p>
             <select name="jumlah_kamar" class="input" id="rooms">
+               <option value="None">None</option>
                <option value="1">1 rooms</option>
                <option value="2">2 rooms</option>
                <option value="3">3 rooms</option>
                <option value="4">4 rooms</option>
                <option value="5">5 rooms</option>
+               <option value="6">6 rooms</option>
             </select>
          </div>
 
          <div class="box">
-            <p>room type <span>*</span></p>
-            <select name="tipe_kamar" class="input" id="type_room">
-               <option value="Exclusive">exclusive rooms</option>
-               <option value="family">family rooms</option>
-               <option value="daily">daily rooms</option>
-               <option value="Panoramic">panoramic rooms</option>
-               <option value="Honey">honey rooms</option>
-            </select>
-         </div>
+                <div class="room-type-container">
+               <p>room type <span>*</span></p>
+               <select name="type" class="input" id="type_room">
+                  <option value="Exclusive">exclusive rooms</option>
+                  <option value="Basic">basic room</option>
+                  <option value="daily">daily rooms</option>
+                  <option value="Panoramic">panoramic rooms</option>
+                  <option value="Honey">honey rooms</option>
+               </select>
+               </div>
+            </div>
 
          </div>
 
