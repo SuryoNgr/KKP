@@ -41,23 +41,25 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if ($room_count >= 5) {
         echo "Maaf, jumlah ruangan untuk tipe kamar ini sudah mencapai batas maksimal (5 ruangan).";
     } else {
-        // ambil ID terakhir dari tabel room dengan prefix yang sama
+        // ambil ID terakhir dari tabel room dengan tanda prefix yang sama
         $sql_last_id = "SELECT MAX(SUBSTRING(id_room, 3)) AS max_id FROM room WHERE id_room LIKE '$prefix%'";
         $result_last_id = $koneksi->query($sql_last_id);
         $row_last_id = $result_last_id->fetch_assoc();
         if ($result_last_id->num_rows > 0) {
             $last_id = intval($row_last_id['max_id']);
-            $new_id = $prefix . str_pad(($last_id + 1), 3, '0', STR_PAD_LEFT); // Format nomor dengan leading zero
+            $new_id = $prefix . str_pad(($last_id + 1), 3, '0', STR_PAD_LEFT);
         } else {
-            // Jika tidak ada data yang ditemukan, maka atur $new_id dengan nomor awal, misalnya 001
+            
             $new_id = $prefix . '001';
         }
 
-        // Query untuk menambahkan ruangan baru dengan ID otomatis
+        // tambah ruangan baru dengan ID otomatis
         $sql_add_room = "INSERT INTO room (id_room, tipe_room, harga_room, status) VALUES ('$new_id', '$tipe_room', '$harga_room', '$status')";
         
         if ($koneksi->query($sql_add_room) === TRUE) {
             echo "New record created successfully";
+            header("Location: ruang.php");
+            exit();
         } else {
             echo "Error: " . $sql_add_room . "<br>" . $koneksi->error;
         }
@@ -73,19 +75,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <title>Add Room</title>
 </head>
 <body>
+     <a href="ruang.php">kembali</a><br>
     <h2>Add Room</h2>
     <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
-        <label for="id_room">Room ID:</label>
-        <input type="text" id="id_room" name="id_room" readonly><br><br>
+       
 
         <label for="tipe_room">Room Type:</label>
         <select name="tipe_kamar" class="input" id="type_room">
                <option value="Exclusive">exclusive rooms</option>
-               <option value="Family">family rooms</option>
+               <option value="Basic">basic rooms</option>
                <option value="Daily">daily rooms</option>
                <option value="Panoramic">panoramic rooms</option>
                <option value="Honey">honey rooms</option>
-        </select>
+        </select><br><br>
 
         <label for="harga_room">Price per Night:</label>
         <input type="number" id="harga_room" name="harga_room" required><br><br>
