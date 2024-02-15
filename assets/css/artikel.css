@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+:root {
+    --primary: #104C97;
+    --secondary: #3777C7;
+    --black: #d1b9b9;
+    --white: #fff;
+    --box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: .2s linear;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 9rem;
+    scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar {
+    width: .8rem;
+}
+
+html::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+html::-webkit-scrollbar-thumb {
+    background: var(--primary);
+    border-radius: .5rem;
+}
+
+section {
+    padding: 5rem 7%;
+}
+
+.heading {
+    font-size: 4rem;
+    color: var(--primary);
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bolder;
+    margin-bottom: 3rem;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 1rem 2rem;
+    background: var(--primary);
+    border-radius: .5rem;
+    color: var(--white);
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: var(--secondary);
+}
+
+/* header */
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: var(--primary);
+    box-shadow: var(--box-shadow);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 7%;
+    --navbar-height: 64px;
+    height: var(--navbar-height);
+}
+
+
+
+.header .navbar ul {
+    list-style: none;
+}
+
+.header .navbar ul li {
+    position: relative;
+    float: left;
+}
+
+.header .navbar ul li a {
+    font-size: 15px;
+    padding: 20px;
+    color: white;
+    display: block;
+}
+
+.header .navbar ul li a:hover {
+    background-color: var(--secondary);
+    color: white;
+}
+
+.header .navbar ul li ul {
+    position: absolute;
+    left: 0;
+    width: 200px;
+    background: var(--primary);
+    display: none;
+}
+
+.header .navbar ul li ul {
+    width: 100%;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.header .navbar ul li:hover>ul {
+    display: initial;
+}
+
+#menu-btn {
+    display: none;
+    font-size: 2.5rem;
+    margin-left: 1.7rem;
+    cursor: pointer;
+    color: var(--white);
+}
+
+#menu-btn:hover {
+    color: var(--black);
+}

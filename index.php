@@ -182,10 +182,8 @@
         <img src="assets/images/index/blueHorizonlogoBlue.png" alt="Logo Resort" width="25%">
         <div class="footer-alamat">
             <div class="kantorPusat">
-                <h3>KANTOR PUSAT</h3>
                 <br>
-                <p>PT. Cakrawala Biru</p>
-                <p>Jl. Asik, Daerah Khusus Ibukota Jakarta</p>
+                <p>Jl. Mt Al Muhsinin No.20, RT.2/RW.1, Sukamaju, Kec. Cilodong, Kota Depok, Jawa Barat 16415</p>
                 <p>Contact center. (0360)161616</p>
             </div>
             <div class="tentangBlue Horizon">
