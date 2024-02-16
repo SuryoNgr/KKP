@@ -17,7 +17,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>MASTER KOMPUTER</title>
+        <title>Hotel Blue Horizon</title>
         <!-- Favicon-->
         <link rel="icon" type="image/x-icon" href="../assets/images/icon/favicon.ico" />
         <!-- Bootstrap icons-->

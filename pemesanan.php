@@ -305,27 +305,27 @@
 
             <div class="box">
                <p>email <span>*</span></p>
-               <input type="text" class="input" placeholder="Email Anda" id="email">
+               <input type="text" class="input" placeholder="Email Anda" id="email" name="email">
             </div>
 
             <div class="box">
                <p>nomor telepon <span>*</span></p>
-               <input type="text" class="input" placeholder="Nomor Telepon Anda" id="notelp">
+               <input type="text" class="input" placeholder="Nomor Telepon Anda" id="notelp" name="notelp">
             </div>
 
             <div class="box">
                <p>nomor rekening <span>*</span></p>
-               <input type="text" class="input" placeholder="Nomor Rekening Anda" id="norek">
+               <input type="text" class="input" placeholder="Nomor Rekening Anda" id="norek" name="norek">
             </div>
 
             <div class="box">
                <p>check in <span>*</span></p>
-               <input type="date" class="input" id="checkin" value="<?php echo $checkin_date; ?>">
+               <input type="date" class="input" id="checkin" value="<?php echo $checkin_date; ?>" name="checkin">
             </div>
 
             <div class="box">
                <p>check out <span>*</span></p>
-               <input type="date" class="input" id="checkout"value="<?php echo $checkout_date; ?>">
+               <input type="date" class="input" id="checkout"value="<?php echo $checkout_date; ?>" name="checkout">
             </div>
 
          <div class="box">
@@ -360,7 +360,7 @@
                <select name="type" class="input" id="type_room">
                   <option value="Exclusive">exclusive rooms</option>
                   <option value="Basic">basic room</option>
-                  <option value="daily">daily rooms</option>
+                  <option value="Daily">daily rooms</option>
                   <option value="Panoramic">panoramic rooms</option>
                   <option value="Honey">honey rooms</option>
                </select>
@@ -368,7 +368,7 @@
             </div>
 
          </div>
-
+         <a href="proses_pesan.php">pesam</a>
          <input type="submit" value="booking now" class="btn">
 
 

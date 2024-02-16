@@ -72,7 +72,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Add Room</title>
+    <title>Hotel Blue Horizon</title>
 </head>
 <body>
      <a href="ruang.php">kembali</a><br>
