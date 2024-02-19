@@ -15,6 +15,55 @@
    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
    <!-- custom css link -->
    <link rel="stylesheet" href="assets/css/pemesanan.css">
+   <style>
+   /* Styling untuk popup */
+.popup {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fefefe;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 300px;
+  text-align: center;
+}
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.input {
+  width: 100%;
+  padding: 8px;
+  margin: 5px 0;
+  box-sizing: border-box;
+}
+
+.btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+.btn:hover {
+  background-color: #45a049;
+}
+</style>
 </head>
 
 <body>
@@ -368,14 +417,94 @@
             </div>
 
          </div>
-         <a href="proses_pesan.php">pesam</a>
-         <input type="submit" value="booking now" class="btn">
+          <!--<a href="proses_pesan.php">pesam</a>-->
+         <input type="button" value="booking now" class="btn" onclick="showPopup()">
 
 
    
       </form>
 
    </section>
+   <!-- Popup -->
+<div class="overlay" id="overlay"></div>
+<div class="popup" id="popup">
+  <h2>Rincian Pilihan & Total Harga</h2>
+  <div id="rincian"></div>
+  <div id="total"></div>
+  <a href="proses_pesan.php" id="konfirmasi" class="btn">Konfirmasi</a>
+</div>
+
+<script>
+// Function untuk menampilkan popup
+function showPopup() {
+    var nama = document.getElementById('nama').value;
+    var email = document.getElementById('email').value;
+    var notelp = document.getElementById('notelp').value;
+    var norek = document.getElementById('norek').value;
+    var checkin = document.getElementById('checkin').value;
+    var checkout = document.getElementById('checkout').value;
+    var person = document.getElementById('person').value;
+    var rooms = document.getElementById('rooms').value;
+
+    // Mengambil semua inputan dari elemen dengan id 'type_room' dan mengembalikan array yang berisi nilai-nilai tersebut
+   function getAllTypeRoomInputs() {
+    var typeRoomInputs = document.querySelectorAll('[id^="type_room_"]'); // Mengambil elemen-elemen select dengan id yang dimulai dengan 'type_room_'
+    var type_room_values = [];
+    typeRoomInputs.forEach(function(input) {
+        type_room_values.push(input.value);
+    });
+    return type_room_values;
+}
+
+    // Mendapatkan semua inputan dari type_room
+    var type_room_inputs = getAllTypeRoomInputs();
+
+    // Mendefinisikan harga untuk setiap tipe kamar
+    var harga = {
+        'Basic': 500000,
+        'Daily': 1000000,
+        'Panoramic': 1500000,
+        'Exclusive': 2000000,
+        'Honey': 2500000
+    };
+
+    // Menghitung total harga berdasarkan inputan type_room
+    var total_harga = 0;
+    type_room_inputs.forEach(function(type) {
+        total_harga += harga[type];
+    });
+    total_harga *= parseInt(rooms);
+
+    var rincian = `
+        <p>Nama: ${nama}</p>
+        <p>Email: ${email}</p>
+        <p>Nomor Telepon: ${notelp}</p>
+        <p>Nomor Rekening: ${norek}</p>
+        <p>Check In: ${checkin}</p>
+        <p>Check Out: ${checkout}</p>
+        <p>Jumlah Pengunjung: ${person}</p>
+        <p>Jumlah Kamar: ${rooms}</p>
+        <p>Tipe Kamar: ${type_room_inputs.join(', ')}</p>
+    `;
+    
+    document.getElementById('rincian').innerHTML = rincian;
+    document.getElementById('total').innerHTML = '<p>Total Harga: Rp.' + total_harga + '</p>';
+
+    document.getElementById('overlay').style.display = 'block';
+    document.getElementById('popup').style.display = 'block';
+}
+
+
+
+// Function untuk menyembunyikan popup
+function hidePopup() {
+  document.getElementById('overlay').style.display = 'none';
+  document.getElementById('popup').style.display = 'none';
+}
+
+
+
+</script>
 
    <!-- end -->
 
@@ -444,7 +573,7 @@
 
    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-   <script src="js/pscript.js"></script>
+    <script src="js/pscript.js"></script>
 
 
 
