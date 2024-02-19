@@ -447,7 +447,7 @@ function showPopup() {
     var rooms = document.getElementById('rooms').value;
 
     // Mengambil semua inputan dari elemen dengan id 'type_room' dan mengembalikan array yang berisi nilai-nilai tersebut
-   function getAllTypeRoomInputs() {
+      function getAllTypeRoomInputs() {
     var typeRoomInputs = document.querySelectorAll('[id^="type_room_"]'); // Mengambil elemen-elemen select dengan id yang dimulai dengan 'type_room_'
     var type_room_values = [];
     typeRoomInputs.forEach(function(input) {
@@ -469,11 +469,11 @@ function showPopup() {
     };
 
     // Menghitung total harga berdasarkan inputan type_room
-    var total_harga = 0;
-    type_room_inputs.forEach(function(type) {
-        total_harga += harga[type];
-    });
-    total_harga *= parseInt(rooms);
+var total_harga = 0;
+type_room_inputs.forEach(function(type) {
+    total_harga += harga[type];
+});
+
 
     var rincian = `
         <p>Nama: ${nama}</p>
