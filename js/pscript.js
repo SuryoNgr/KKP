@@ -281,3 +281,77 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 });
+
+// Function untuk menampilkan popup
+function showPopup() {
+  var nama = document.getElementById('nama').value;
+  var email = document.getElementById('email').value;
+  var notelp = document.getElementById('notelp').value;
+  var norek = document.getElementById('norek').value;
+  var checkin = new Date(document.getElementById('checkin').value);
+  var checkout = new Date(document.getElementById('checkout').value);
+  var person = document.getElementById('person').value;
+  var rooms = document.getElementById('rooms').value;
+
+  // Mengambil semua inputan dari elemen dengan id 'type_room' dan mengembalikan array yang berisi nilai-nilai tersebut
+    function getAllTypeRoomInputs() {
+  var typeRoomInputs = document.querySelectorAll('[id^="type_room_"]'); // Mengambil elemen-elemen select dengan id yang dimulai dengan 'type_room_'
+  var type_room_values = [];
+  typeRoomInputs.forEach(function(input) {
+      type_room_values.push(input.value);
+  });
+  return type_room_values;
+}
+
+  // Mendapatkan semua inputan dari type_room
+  var type_room_inputs = getAllTypeRoomInputs();
+
+  // Mendefinisikan harga untuk setiap tipe kamar
+  var harga = {
+      'Basic': 500000,
+      'Daily': 1000000,
+      'Panoramic': 1500000,
+      'Exclusive': 2000000,
+      'Honey': 2500000
+  };
+
+  // Menghitung total harga berdasarkan inputan type_room
+var total_harga = 0;
+type_room_inputs.forEach(function(type) {
+  total_harga += harga[type];
+});
+
+ // Menghitung jumlah hari antara check-in dan check-out
+ var oneDay = 24 * 60 * 60 * 1000; // Satu hari dalam milidetik
+ var jumlah_hari = Math.round(Math.abs((checkout - checkin) / oneDay));
+
+ // Mengalikan jumlah hari dengan total harga
+ total_harga *= jumlah_hari;
+
+
+  var rincian = `
+      <p>Nama:<b> ${nama}</b></p>
+      <p>Email: <b>${email}</b></p>
+      <p>Nomor Telepon: <b>${notelp}</b></p>
+      <p>Nomor Rekening: <b>${norek}</b></p>
+      <p>Check In: <b>${checkin.toLocaleDateString()}</b></p>
+      <p>Check Out: <b>${checkout.toLocaleDateString()}</b></p>
+      <p>Jumlah Pengunjung:<b> ${person}</b></p>
+      <p>Jumlah Kamar: <b>${rooms}</b></p>
+      <p>Tipe Kamar: <b>${type_room_inputs.join(', ')}</b></p>
+  `;
+  
+  document.getElementById('rincian').innerHTML = rincian;
+  document.getElementById('total').innerHTML = '<p>Total Harga: <b>Rp.' + total_harga + '</b> </p>';
+
+  document.getElementById('overlay').style.display = 'block';
+  document.getElementById('popup').style.display = 'block';
+}
+
+
+
+// Function untuk menyembunyikan popup
+function hidePopup() {
+document.getElementById('overlay').style.display = 'none';
+document.getElementById('popup').style.display = 'none';
+}
