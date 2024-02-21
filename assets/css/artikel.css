@@ -137,3 +137,33 @@ section {
 #menu-btn:hover {
     color: var(--black);
 }
+
+/* body */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #87CEEB; /* Warna biru langit */
+    position: relative;
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0; /* Memindahkan shape ke bagian kanan */
+    width: 50vw; /* Ukuran shape mengikuti lebar viewport */
+    height: 100vh; /* Ukuran shape mengikuti tinggi viewport */
+    background-color: rgb(255, 204, 0); /* Warna kuning */
+    z-index: -1; /* Mengatur z-index untuk menempatkan shape di belakang konten */
+    clip-path: polygon(100% 0, 100% 100%, 0 50%); /* Bentuk polygon "<" */
+}
+
+.paragraph-container {
+    background-color: #fff; /* Warna latar belakang putih */
+    padding: 20px; /* Padding untuk jarak antara teks dan batas kontainer */
+    border-radius: 10px; /* Memunculkan border-radius untuk sudut kontainer */
+    width: 80%; /* Lebar kontainer paragraf */
+    margin: 50px auto; /* Margins untuk penempatan di tengah */
+}
