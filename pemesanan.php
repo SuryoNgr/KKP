@@ -369,8 +369,9 @@
             </div>
 
          </div>
-          <!--<a href="proses_pesan.php">pesam</a>-->
-         <input type="button" value="booking now" class="btn" onclick="showPopup()">
+          <!--<a href="proses_pesan.php">pesan</a>-->
+          <input type="submit" value="Submit" class="btn">
+        <!--< <input type="button" value="booking now" class="btn" onclick="showPopup()">-->
 
 
    
