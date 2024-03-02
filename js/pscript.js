@@ -81,7 +81,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 roomTypeBox.classList.add("box");
                 roomTypeBox.innerHTML = `
                     <p>room type ${i + 1} <span>*</span></p>
-                     <select name="type" class="input" id="type_room">
+                     <select name="type[]" class="input" id="type_room">
                         <option value="Exclusive">exclusive rooms</option>
                         <option value="Basic">basic rooms</option>
                         <option value="Daily">daily rooms</option>

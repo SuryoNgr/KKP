@@ -358,7 +358,7 @@
          <div class="box">
                 <div class="room-type-container">
                <p>room type <span>*</span></p>
-               <select name="type" class="input" id="type_room">
+               <select name="type[]" class="input" id="type_room">
                   <option value="Exclusive">exclusive rooms</option>
                   <option value="Basic">basic room</option>
                   <option value="Daily">daily rooms</option>

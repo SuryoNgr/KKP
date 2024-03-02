@@ -7,26 +7,34 @@ if (!isset($_SESSION)) {
     }
 }
 
-if(isset($_POST['hapus_btn'])) {
-    $hapus_id = $_POST['hapus_id'];
-    $sql_delete = "DELETE FROM room WHERE id_room = '$hapus_id'";
-    if ($koneksi->query($sql_delete) === TRUE) {
-        header("Location: ruang.php");
-        exit();
-    } else {
-        echo "Error deleting record: " . $koneksi->error;
-    }
+// Inisialisasi variabel filter
+$filter = "";
+// Periksa apakah filter disimpan dalam session
+if (isset($_SESSION['room_filter'])) {
+    $filter = $_SESSION['room_filter'];
 }
 
-$filter = "";
 if(isset($_POST['apply_filter'])) {
     $selected_type = $_POST['room_type']; // Mengambil nilai yang benar dari dropdown
     if ($selected_type != "all") {
         $filter = "WHERE tipe_room = '$selected_type'";
+        // Simpan filter dalam session
+        $_SESSION['room_filter'] = $filter;
+    } else {
+        // Jika opsi "all" dipilih, hapus filter dari session
+        unset($_SESSION['room_filter']);
     }
 }
 
-// Menyusun kueri SQL dengan filter yang diterapkan
+// Check if the "Reset Filter" button is clicked
+if(isset($_POST['reset_filter'])) {
+    // Hapus filter dari session
+    unset($_SESSION['room_filter']);
+    // Set filter ke string kosong
+    $filter = "";
+}
+
+// Menyusun kueri SQL dengan filter yang disimpan dalam session
 $sql = "SELECT * FROM room $filter ORDER BY harga_room ASC, id_room ASC";
 $result = $koneksi->query($sql);
 ?>
@@ -36,7 +44,7 @@ $result = $koneksi->query($sql);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hotel Blue Horizon</title>
+    <title>Room Data</title>
     <style>
         table {
             width: 100%;
@@ -50,7 +58,6 @@ $result = $koneksi->query($sql);
         th {
             background-color: #f2f2f2;
         }
-
         .popup {
             display: none;
             position: fixed;
@@ -69,9 +76,9 @@ $result = $koneksi->query($sql);
     <h2>Room Data</h2>
 
     <button onclick="window.location.href='add_room.php'">Add Room</button>
-    <button class="fa fa-filter" onclick="togglePopup()"> Filter</button>
+    <button class="fa fa-filter" onclick="togglePopup()">Filter</button>
 
-    <!-- tampilan pop up -->
+    <!-- Pop up -->
     <div id="popup" class="popup">
         <form method="post">
             <div class="dropdown">
@@ -95,7 +102,7 @@ $result = $koneksi->query($sql);
         <tr>
             <th>Room Number</th>
             <th>Room Type</th>
-            <th>Harga/malam</th>
+            <th>Price/Night</th>
             <th>Status</th>
             <th colspan="2">Action</th>
         </tr>
@@ -107,10 +114,10 @@ $result = $koneksi->query($sql);
                 echo "<td>" . $row["tipe_room"] . "</td>";
                 echo "<td>" . $row["harga_room"] . "</td>";
                 echo "<td>" . $row["status"] . "</td>";
-                echo "<td><a href='ubah_status.php?id=" . $row["id_room"] . "'>Ubah Status</a></td>";
+                echo "<td><a href='ubah_status.php?id=" . $row["id_room"] . "'>Change Status</a></td>";
                 echo "<td>
                         <form method='post'> <input type='hidden' name='hapus_id' value='" . $row["id_room"] . "'>
-                        <button type='submit' name='hapus_btn'>Hapus</button>
+                        <button type='submit' name='hapus_btn'>Delete</button>
                         </form> 
                      </td>";
                 echo "</tr>";
@@ -122,6 +129,6 @@ $result = $koneksi->query($sql);
         ?>
     </table>
 
-    <script src="../js/owner.js">  </script>
+    <script src="../js/owner.js"></script>
 </body>
 </html>
