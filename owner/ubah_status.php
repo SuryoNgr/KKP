@@ -18,15 +18,6 @@ if(isset($_GET['id'])) {
 
         if ($koneksi->query($sql_update_status) === TRUE) {
             echo "Status ruangan berhasil diubah menjadi: " . $new_status;
-            
-            // Hapus data dari tabel payment yang terkait dengan id_room yang diubah statusnya
-            $sql_delete_payment = "DELETE FROM payment WHERE id_room = '$id_room'";
-            if ($koneksi->query($sql_delete_payment) === TRUE) {
-                echo "Data dari tabel payment yang terkait dengan ruangan ini berhasil dihapus.";
-            } else {
-                echo "Error deleting payment data: " . $koneksi->error;
-            }
-
             echo "<script>window.location.href = 'ruang.php';</script>";
         } else {
             echo "Error updating record: " . $koneksi->error;

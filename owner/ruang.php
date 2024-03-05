@@ -45,6 +45,9 @@ $result = $koneksi->query($sql);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Room Data</title>
+    
+    <link href="../assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="../assets/css/navbar.css">
     <style>
         table {
             width: 100%;
@@ -73,6 +76,7 @@ $result = $koneksi->query($sql);
     </style>
 </head>
 <body>
+<?php include 'navbar.php' ?>
     <h2>Room Data</h2>
 
     <button onclick="window.location.href='add_room.php'">Add Room</button>
@@ -114,7 +118,7 @@ $result = $koneksi->query($sql);
                 echo "<td>" . $row["tipe_room"] . "</td>";
                 echo "<td>" . $row["harga_room"] . "</td>";
                 echo "<td>" . $row["status"] . "</td>";
-                echo "<td><a href='ubah_status.php?id=" . $row["id_room"] . "'>Change Status</a></td>";
+                echo "<td><a href='ubah_status.php?id=" . $row["id_room"] . "' class='status-change-link'>Change Status</a></td>";
                 echo "<td>
                         <form method='post'> <input type='hidden' name='hapus_id' value='" . $row["id_room"] . "'>
                         <button type='submit' name='hapus_btn'>Delete</button>
@@ -128,7 +132,28 @@ $result = $koneksi->query($sql);
         $koneksi->close();
         ?>
     </table>
+    
 
     <script src="../js/owner.js"></script>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+    var statusChangeLinks = document.querySelectorAll('.status-change-link');
+    statusChangeLinks.forEach(function(link) {
+        link.addEventListener('click', function(event) {
+            event.preventDefault();
+            if (confirm("Are you sure you want to change the status of this room?")) {
+                window.location.href = event.target.href;
+            }
+        });
+    });
+});
+</script>
+
+<footer class="foot">
+<div class="footer-bottom">
+            <p>&copy; 2023 Your Company. All rights reserved.</p>
+          </div>
+</footer>
 </body>
 </html>

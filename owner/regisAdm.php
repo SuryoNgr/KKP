@@ -19,7 +19,7 @@
 <!--===============================================================================================-->	
 	<link rel="icon" type="assets/image/png" href="assets/images/icons/logo.ico"/>
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+
 <!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
 	<link href="../assets/vendor/fontawesome-free/css/all.css" rel="stylesheet" type="text/css">
@@ -32,7 +32,7 @@
 <!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="assets/css/util.css">
 	<link rel="stylesheet" type="text/css" href="../assets/css/main.css">
-	<link href="../assets/css/ADMmain.css" rel="stylesheet" />
+
 <!--===============================================================================================-->
 <style>
 		.container-login100 {
@@ -40,7 +40,7 @@
 		}
 	</style>
 </head>
-<body><?php include 'navbarOWN.php' ?>
+<body><?php include 'navbar.php' ?>
 	
 	<?php 
 
@@ -53,8 +53,6 @@
 
 	<div class="limiter">
 		<div class="container-login100">
-		
-
 				<form class="login100-form validate-form" action="prosesregisADM.php" method="post">
 					<span class="login100-form-title">
 						Daftar Staff
@@ -99,13 +97,6 @@
 							Register
 						</button>
 					</div>
-
-					<div class="text-center p-t-136">
-						<a class="txt2" href="halaman_owner.php">
-							Alredy Have Account
-							<i class="fa fa-long-arrow-right m-l-5" aria-hidden="true"></i>
-						</a>
-					</div>
 				</form>
 			</div>
 		</div>
@@ -113,7 +104,11 @@
 	
 	
 
-	
+	<footer class="foot">
+<div class="footer-bottom">
+            <p>&copy; 2023 Your Company. All rights reserved.</p>
+          </div>
+</footer>
 <!--===============================================================================================-->	
 	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
 <!--===============================================================================================-->

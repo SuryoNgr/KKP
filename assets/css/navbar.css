@@ -1,0 +1,112 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+body{
+    margin: 0;
+    padding: 0;
+}
+.navbar {
+    background-color: #104c97;
+    color: white;
+    padding: 10px;
+    width: 100%;
+    box-shadow:0 8px 16px 0 rgba(0,0,0,0.2);
+    top: 0;
+    z-index: 9999;
+}
+.navbar h1{
+    font-family: 'Bebas Neue';
+    letter-spacing: 1px;
+}
+.subnav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.subnav ul{ 
+    list-style-type: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+.subnav li {
+    margin-right: 10px;
+    display: inline;
+}
+.subnav a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+        position: relative;
+        transition: all .3s cubic-bezier(.2, 0, 0, 1);
+        z-index: 1;
+        padding: 2px;
+        &:after {
+          content: ''; 
+          height: 1px;
+          position: absolute;
+          bottom: 0;
+          right: 2px;
+          left: 2px;
+          background-color: white;
+          transition: all .3s cubic-bezier(.2, 0, 0, 1);
+          transform-origin: bottom center;
+          z-index: -1;
+        }
+        &:hover {
+          color: black!important;
+          &:after {
+            right: 0;
+            left: 0;
+            height: 100%;
+          }
+        }
+      }
+
+
+      .user-info {
+        display: flex;
+        align-items: center;
+        padding-right: 20px;
+    }
+    
+    .user-icon {
+        width: 30px; /* Adjust size as needed */
+        height: 30px; /* Adjust size as needed */
+        border-radius: 50%; /* Make it circular */
+        margin-right: 10px; /* Add spacing between icon and name */
+    }
+    
+    .user-name {
+        color: white;
+        font-size: 20px; 
+        margin-right: 10px; 
+    }
+    
+    .logout-btn {
+        background-color: #104c97;
+        color: white;
+        padding: 5px 10px;
+        border-radius: 5px;
+        text-decoration: none;
+    }
+
+    .foot {
+      position: relative;
+      bottom: -0;
+      font-size: 18px;
+      width: 100%;
+      background-color: #333;
+      color: #fff;
+      padding: 30px 0;
+      border-radius: 10px;
+  }
+    .footer-bottom {
+      margin-top: 20px;
+      text-align: center;
+  }
+    
+  .footer-bottom p {
+      margin: 0;
+  }
+

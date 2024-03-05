@@ -22,17 +22,17 @@
         <link rel="icon" type="image/x-icon" href="../assets/images/icon/favicon.ico" />
         <!-- Bootstrap icons-->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
-        <link href="../assets/css/bootstrap.min.css" rel="stylesheet">
+        
         <!-- Core theme CSS (includes Bootstrap)-->
          <link href="../assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-        <link href="../assets/css/ADMmain.css" rel="stylesheet" />
+        
 
     </head>
     <body class="d-flex flex-column min-vh-100" style="height: 100%">
-       <?php include 'navbarOWN.php' ?>
+       <?php include 'navbar.php' ?>
        
 <section>
-    <h1>KOSONG</h1>
+   
     
 
 </section>
@@ -40,34 +40,16 @@
       
 
 
- <!-- Logout Modal-->
-    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Yakin ingin Logout ?</h5>
-            <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">×</span>
-            </button>
-          </div>
-          <div class="modal-body">Tekan "Logout" dibawah  jika kamu yakin ingin keluar dari akun.</div>
-          <div class="modal-footer">
-            <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-            <a class="btn btn-primary" href="../logout.php">Logout</a>
-          </div>
-        </div>
-      </div>
-    </div>
+
 
 
 
 
         <!-- Footer-->
-<footer class="py-5 bg-dark mt-auto">
-
-        <div class="container">
-            <p class="m-0 text-center text-white">Copyright &copy;MasterKomputer</p>
-        </div>
+<footer class="foot">
+<div class="footer-bottom">
+            <p>&copy; 2023 Your Company. All rights reserved.</p>
+          </div>
 </footer>
         <!-- Bootstrap core JS-->
 
