@@ -220,15 +220,15 @@ function showPopup() {
   var person = document.getElementById('person').value;
   var rooms = document.getElementById('rooms').value;
 
-  // Mengambil semua inputan dari elemen dengan id 'type_room' dan mengembalikan array yang berisi nilai-nilai tersebut
-    function getAllTypeRoomInputs() {
-  var typeRoomInputs = document.querySelectorAll('[id^="type_room_"]'); // Mengambil elemen-elemen select dengan id yang dimulai dengan 'type_room_'
-  var type_room_values = [];
-  typeRoomInputs.forEach(function(input) {
-      type_room_values.push(input.value);
-  });
-  return type_room_values;
-}
+  // Mengambil semua inputan dari elemen dengan name 'type[]' dan mengembalikan array yang berisi nilai-nilai tersebut
+  function getAllTypeRoomInputs() {
+    var typeRoomInputs = document.querySelectorAll('[name="type[]"]'); // Mengambil elemen-elemen select dengan name 'type[]'
+    var type_room_values = [];
+    typeRoomInputs.forEach(function(input) {
+        type_room_values.push(input.value);
+    });
+    return type_room_values;
+  }
 
   // Mendapatkan semua inputan dari type_room
   var type_room_inputs = getAllTypeRoomInputs();

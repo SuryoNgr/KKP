@@ -91,10 +91,7 @@
             <p>Welcome, embrace the day with joy!</p>
         </span>
         <div class="text">
-            Discover a haven of tranquility nestled in the heart of Bali. Experience the perfect
-            blend of luxury and cultural richness at Blue Horizon. Explore the allure of our exquisite
-            accommodations and embrace the beauty of Bali. Your extraordinary journey begins
-            here.
+        Discover peace and excitement at Blue Horizon. Your extraordinary journey begins here.
         </div>
     </div>
     <div class="fasilitas" id="Facility">

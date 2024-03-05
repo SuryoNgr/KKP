@@ -329,67 +329,65 @@
                <input type="date" class="input" id="checkout"value="<?php echo $checkout_date; ?>" name="checkout">
             </div>
 
-         <div class="box">
-            <p>pengunjung <span>*</span></p>
-            <select name="jumlah_tamu" class="input" id="person">
-               <option value="None">None</option>
-               <option value="1">1 person</option>
-               <option value="2">2 person</option>
-               <option value="3">3 person</option>
-               <option value="4">4 person</option>
-               <option value="5">5 person</option>
-               <option value="6">6 person</option>
-            </select>
-         </div>
-
-         <div class="box">
-            <p>rooms <span>*</span></p>
-            <select name="jumlah_kamar" class="input" id="rooms">
-               <option value="None">None</option>
-               <option value="1">1 rooms</option>
-               <option value="2">2 rooms</option>
-               <option value="3">3 rooms</option>
-               <option value="4">4 rooms</option>
-               <option value="5">5 rooms</option>
-               <option value="6">6 rooms</option>
-            </select>
-         </div>
-
-         <div class="box">
-                <div class="room-type-container">
-               <p>room type <span>*</span></p>
-               <select name="type[]" class="input" id="type_room">
-                  <option value="Exclusive">exclusive rooms</option>
-                  <option value="Basic">basic room</option>
-                  <option value="Daily">daily rooms</option>
-                  <option value="Panoramic">panoramic rooms</option>
-                  <option value="Honey">honey rooms</option>
+            <div class="box">
+               <p>pengunjung <span>*</span></p>
+               <select name="jumlah_tamu" class="input" id="person">
+                  <option value="None">None</option>
+                  <option value="1">1 person</option>
+                  <option value="2">2 person</option>
+                  <option value="3">3 person</option>
+                  <option value="4">4 person</option>
+                  <option value="5">5 person</option>
+                  <option value="6">6 person</option>
                </select>
-               </div>
+            </div>
+
+            <div class="box">
+               <p>rooms <span>*</span></p>
+               <select name="jumlah_kamar" class="input" id="rooms">
+                  <option value="None">None</option>
+                  <option value="1">1 rooms</option>
+                  <option value="2">2 rooms</option>
+                  <option value="3">3 rooms</option>
+                  <option value="4">4 rooms</option>
+                  <option value="5">5 rooms</option>
+                  <option value="6">6 rooms</option>
+               </select>
+            </div>
+
+            <div class="box">
+                  <div class="room-type-container">
+                     <p>room type <span>*</span></p>
+                     <select name="type" class="input" id="type_room">
+                        <option value="Exclusive">exclusive rooms</option>
+                        <option value="Basic">basic room</option>
+                        <option value="Daily">daily rooms</option>
+                        <option value="Panoramic">panoramic rooms</option>
+                        <option value="Honey">honey rooms</option>
+                     </select>
+                  </div>
             </div>
 
          </div>
-          <!--<a href="proses_pesan.php">pesan</a>-->
-          <input type="submit" value="Submit" class="btn">
-        <!--< <input type="button" value="booking now" class="btn" onclick="showPopup()">-->
-
-
-   
-      </form>
-
-   </section>
-   <!-- Popup -->
-<div class="overlay" id="overlay"></div>
+          <input type="button" value="booking now" class="btn" onclick="showPopup()">
+          <div class="overlay" id="overlay"></div>
 <div class="popup" id="popup">
   <h2>Rincian Pilihan & Total Harga</h2>
   <br>
   <div id="rincian"></div>
   <div id="total"></div>
   <div id="btn-popup">
-   <button id="batal" class="btn" onclick="hidePopup()">Batal</button>
-   <a href="proses_pesan.php" id="konfirmasi" class="btn">Konfirmasi</a>
+  <input type="button" value="Batal" class="btn" onclick="hidePopup()">
+   <input type="submit" value="Submit" class="btn">
    </div>
 </div>
+
+   
+      </form>
+
+   </section>
+   <!-- Popup -->
+
 
    <!-- end -->
 

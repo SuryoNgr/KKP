@@ -19,6 +19,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Hitung total harga keseluruhan
     $total_harga_keseluruhan = 0;
+    $rincian_kamar = "";
     for ($i = 0; $i < $jumlah_kamar; $i++) {
         // Ambil tipe kamar untuk kamar ke-$i
         $type = $type_room[$i];
@@ -51,6 +52,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     error_log($error_message);
                     echo $error_message;
                 }
+
+                // Tambahkan rincian kamar ke nota
+                $rincian_kamar .= "Kamar " . ($i+1) . ": " . $type . " - Rp." . number_format($harga_total) . "<br>";
             } else {
                 $error_message = "Error: " . $sql_insert_payment . "<br>" . $koneksi->error;
                 error_log($error_message);
@@ -70,7 +74,30 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $sql_insert_customer = "INSERT INTO pelanggan (norek_pl, nama_pl, harga_keseluruhan) VALUES ('$norek', '$nama', '$total_harga_keseluruhan')";
 
     if ($koneksi->query($sql_insert_customer) === TRUE) {
-        echo "Data pelanggan berhasil ditambahkan.";
+        // Menampilkan rincian dan tombol print serta tombol home
+        echo "
+        <div style='background-color: #fff; padding: 20px; border-radius: 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); margin: 0 auto; max-width: 600px;'>
+            <h2 style='text-align: center; color: #333;'>Nota Pemesanan</h2>
+            <div style='margin-bottom: 20px;'>
+                <p>Nama: $nama</p>
+                <p>Email: $email</p>
+                <p>Nomor Telepon: $notelp</p>
+                <p>Nomor Rekening: $norek</p>
+                <p>Check-in: $checkin</p>
+                <p>Check-out: $checkout</p>
+                <p>Jumlah Tamu: $jumlah_tamu</p>
+                <p>Jumlah Kamar: $jumlah_kamar</p>
+                <p>Rincian Kamar: <br>$rincian_kamar</p>
+                <p>Total Harga: Rp." . number_format($total_harga_keseluruhan) . "</p>
+            </div>
+            <div style='text-align: center;'>
+                <!-- Tombol untuk print nota -->
+                <button style='background-color: #4CAF50; border: none; color: white; padding: 10px 20px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; margin: 4px 2px; cursor: pointer; border-radius: 5px;' onclick='window.print()'>Cetak</button>
+                <!-- Tombol untuk kembali ke halaman utama -->
+                <button style='background-color: #f44336; border: none; color: white; padding: 10px 20px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; margin: 4px 2px; cursor: pointer; border-radius: 5px;' onclick='window.location.href=\"index.php\"'>Home</button>
+            </div>
+        </div>
+        ";
     } else {
         $error_message = "Error: " . $sql_insert_customer . "<br>" . $koneksi->error;
         error_log($error_message);
