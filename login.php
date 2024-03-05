@@ -21,8 +21,9 @@
 	<link rel="stylesheet" type="text/css" href="assets/css/main.css">
 <!--===============================================================================================-->
 	<style>
-		.container-login100 {
-			background-color: #50C878;
+		body {
+			background-color: #104c97;
+			
 		}
 	</style>
 </head>
@@ -40,7 +41,7 @@
 		<div class="container-login100">
 			<div class="wrap-login100">
 				<div class="login100-pic js-tilt" data-tilt>
-					<img src="assets/images/logo.png" alt="IMG">
+					<img src="assets/images/index/iconLogo.png" alt="IMG">
 				</div>
 
 	
@@ -72,16 +73,6 @@
 						<button class="login100-form-btn">
 							Login
 						</button>
-					</div>
-
-					
-					
-
-					<div class="text-center p-t-136">
-						<a class="txt2" href="register.php">
-							Create your Account
-							<i class="fa fa-long-arrow-right m-l-5" aria-hidden="true"></i>
-						</a>
 					</div>
 				</form>
 			</div>

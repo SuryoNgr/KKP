@@ -20,7 +20,7 @@
             <div class="user-info">
                 <img src="../assets/images/user.jpg" alt="User Icon" class="user-icon">
                 <b class="user-name" ><?php echo $_SESSION['username'];  ?></b>
-                <a href="../logout.php"  class="logout-btn" data-toggle="modal" data-target="#logoutModal">Logout</a>
+                <a href="../logout.php"  class="logout-btn" >Logout</a>
             </div>
         </div>
     </div>

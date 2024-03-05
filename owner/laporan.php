@@ -22,18 +22,17 @@
         <link rel="icon" type="image/x-icon" href="../assets/images/icon/favicon.ico" />
         <!-- Bootstrap icons-->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
-        
         <!-- Core theme CSS (includes Bootstrap)-->
          <link href="../assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-        
+         
 
     </head>
     <body class="d-flex flex-column min-vh-100" style="height: 100%">
        <?php include 'navbar.php' ?>
        
 <section>
-   
-    
+
+    <h1>KOSONG</h1>
 
 </section>
 
