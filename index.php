@@ -91,7 +91,7 @@
             <p>Welcome, embrace the day with joy!</p>
         </span>
         <div class="text">
-        Discover peace and excitement at Blue Horizon. Your extraordinary journey begins here.
+            Discover peace and excitement at Blue Horizon. Your extraordinary journey begins here.
         </div>
     </div>
     <div class="fasilitas" id="Facility">
@@ -108,7 +108,7 @@
         <div class="deskFasilitasTop">
             <img src="assets/images/index/ocean-front-dinning.png" alt="ocean-front-dinning" />
             <div class="textFasilitas">
-                <h1>Oceanfront Dining</h1>
+                <h1>Sky View Dining</h1>
                 <br />
                 <p class="text">
                     "Secure your spot in our inviting dining room for a memorable
@@ -135,22 +135,6 @@
                 <div class="kotakFasilitas">Plant Your Event</div>
             </div>
             <img src="assets/images/index/event-wedding.png" alt="event-wedding" />
-        </div>
-    </div>
-    <div class="explore">
-        <img src="assets/images/index/at-our-ressort.png" alt="at-our-ressort" />
-        <div class="teksExplore">
-            <h1>At Our Resort</h1>
-            <br />
-            <p class="text">
-                "Explore the facilities and amenities of Hilton Bali Resort.
-                Discover the popular Kids Club and a full-service Mandara Spa offering a wide selection of relaxing
-                treatments.
-                Make a splash at one of our four pools, or relax on the white sandy beach.
-                Hilton Bali Resort is the perfect place for a relaxing tropical getaway."
-            </p>
-            <br />
-            <div class="kotakExplore">Explore Our Resort</div>
         </div>
     </div>
     <!-- end -->

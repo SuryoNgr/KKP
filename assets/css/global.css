@@ -365,8 +365,8 @@ section {
     flex-direction: row;
     margin-top: 230px;
     background-color: #104c97;
-    justify-content: space-between;
-    align-items: left;
+    justify-content: left; 
+    align-items: left; 
     flex-wrap: wrap;
     gap: 30px;
     padding: 30px;
@@ -375,11 +375,11 @@ section {
 .deskMap {
     width: 450px;
     color: #fff;
-    margin: auto;
+    margin: left;
     display: flex;
     align-items: left;
     justify-content: left;
-    padding: 0px 50px;
+    padding: 30px;
 }
 
 
@@ -685,7 +685,7 @@ P {
         .containerMap {
             display: flex;
             flex-direction: row;
-            align-items: center;
+            align-items: left;
             margin-top: 5vh;
             background-color: #104c97;
             justify-content: space-between;
@@ -702,8 +702,8 @@ P {
 
         #map {
             display: flex;
-            align-items: center;
-            justify-content: center;
+            align-items: left;
+            justify-content: left;
             margin: auto;
             inline-size: -webkit-fill-available;
         }
