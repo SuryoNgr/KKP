@@ -38,8 +38,8 @@
                 <li><a style="text-decoration:none" href="pemesanan.php">Book now</a></li>
                 <li><a style="text-decoration:none" href="#information">Information</a>
                     <ul>
-                        <li><a style="text-decoration:none" href="contact-us.html">Contact us</a></li>
-                        <li><a style="text-decoration:none" href="artikel.php">About us</a></li>
+                        <li><a style="text-decoration:none" href="contact-us.php">Contact us</a></li>
+                        <li><a style="text-decoration:none" href="about-us.php">About us</a></li>
                     </ul>
                 </li>
             </ul>
@@ -61,7 +61,7 @@
                         <h3>Blue Horizon</h3>
                     </div>
                 </div>
-                <div class="swiper-slide slide" style="background: url(assets/images/index/Swim.png) no-repeat;">
+                <div class="swiper-slide slide" style="background: url(assets/images/index/home-slide2.png) no-repeat;">
                     <div class="content">
                         <h3>Blue Horizon</h3>
                     </div>
@@ -127,9 +127,9 @@
                 <h1>Meeting Event and Weedings</h1>
                 <br />
                 <p class="text">
-                    "Host your next event in Bali. Our versatile spaces allow all combinations,
+                    "Host your next event in Blue Horizon. Our versatile spaces allow all combinations,
                     from small meetings, regional conferences, and international gatherings to gala dinners,
-                    spectacular oceanfront weddings, and large beachside dinners for up to 500 people."
+                    spectacular hotel weddings, and dinners for up to 250 people."
                 </p>
                 <br />
                 <div class="kotakFasilitas">Plant Your Event</div>
@@ -145,8 +145,6 @@
             <div>
                 <div class="titleMap"><img src="assets/images/index/BlueHorizonWhite.png" alt="logo resort" width="100%"></div>
                 <br><br>
-                <div class="alamatMap">Found us at.</div>
-                <br>
                 <div class="noTelpMap">Call us <br> (0360)161616</div>
                 <br>
                 <div class="btnMap">
@@ -167,17 +165,10 @@
                 <p>Jl. Mt Al Muhsinin No.20, RT.2/RW.1, Sukamaju, Kec. Cilodong, Kota Depok, Jawa Barat 16415</p>
                 <p>Contact center. (0360)161616</p>
             </div>
-            <div class="tentangBlue Horizon">
-                <h3>Tentang Blue Horizon</h3>
-                <br>
-                <a class="BlueHorizonProf" href="home.html">
-                    <p>Profil Perusahaan</p>
-                </a>
-            </div>
             <div class="services">
                 <h3>Service</h3>
                 <br>
-                <a class="BlueHorizonProf" href="#">
+                <a class="BlueHorizonProf" href="index.php#Facility">
                     <p>Fasilitas Kami</p>
                 </a>
             </div>

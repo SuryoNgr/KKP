@@ -231,7 +231,7 @@ section {
     align-items: center;
     justify-content: center;
     flex-direction: row;
-    padding: 5rem 7%;
+    padding: 3rem 7%;
     margin-top: 0px;
     z-index: 1;
 }
@@ -363,7 +363,7 @@ section {
 .containerMap {
     display: flex;
     flex-direction: row;
-    margin-top: 230px;
+    margin-top: 130px;
     background-color: #104c97;
     justify-content: left; 
     align-items: left; 

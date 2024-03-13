@@ -25,7 +25,23 @@ var swiper = new Swiper(".home-slider", {
   },
 });
 
-var swiper = new Swiper(".room-slider", {
+// Inisialisasi Swiper untuk slider utama (Home Slider)
+var homeSwiper = new Swiper(".swiper.home-slider", {
+  grabCursor: true,
+  loop: true,
+  centeredSlides: true,
+  autoplay: {
+    delay: 7500,
+    disableOnInteraction: false,
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+});
+
+// Inisialisasi Swiper untuk slider kamar (Room Slider)
+var roomSwiper = new Swiper(".swiper.room-slider", {
   spaceBetween: 20,
   grabCursor: true,
   loop: true,

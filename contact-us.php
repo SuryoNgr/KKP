@@ -42,13 +42,12 @@
     <div class="faqs-container">
         <div class="faq active">
             <h3 class="faq-title">
-                What is Blue Horizon Resort?
+                What is Blue Horizon?
             </h3>
             <p class="faq-text">
-                a 5-star resort located in Nusa Dua, Bali, with views of the Indian Ocean and a secluded white sandy
-                beach.
-                This resort offers a variety of luxurious and traditional facilities, such as
-                4 swimming pools, fitness center, spa, restaurant and wedding venue
+                a Hotel located in Depok, West Java, with views of the city.
+                This hotel offers a variety of luxurious and traditional facilities, such as
+                private room, restaurant, and wedding venue
             </p>
             <button class="faq-toggle">
                 <i class="fas fa-chevron-down"></i>
@@ -61,7 +60,7 @@
                 What types of Rooms Does Bali Horizon offer?
             </h3>
             <p class="faq-text">
-                We Offer Daily, Deluxe, Panoramic, Honey, exclusive and Familiy. Each Designed To Cater To Different
+                We Offer Basic, Daily, Panoramic, Exclusive and Honey. Each Designed To Cater To Different
                 Preferences And Needs.
             </p>
             <button class="faq-toggle">
@@ -84,11 +83,6 @@
             </button>
         </div>
     </div>
-
-    <!-- SOCIAL PANEL HTML -->
-    <button class="floating-btn">
-        <a href="about-us.html" style="color: goldenrod;">Get in Touch</a>
-    </button>
 
     <!-- contact us -->
     <section>
@@ -136,33 +130,23 @@
         <img src="assets/images/index/blueHorizonlogoBlue.png" alt="Logo Resort" width="25%">
         <div class="footer-alamat">
             <div class="kantorPusat">
-                <h3>KANTOR PUSAT</h3>
                 <br>
-                <p>PT. Cakrawala Biru</p>
-                <p>Jl. DR. Ide Anak Agung Gde Agung, Daerah Khusus Ibukota Jakarta</p>
+                <p>Jl. Mt Al Muhsinin No.20, RT.2/RW.1, Sukamaju, Kec. Cilodong, Kota Depok, Jawa Barat 16415</p>
                 <p>Contact center. (0360)161616</p>
-            </div>
-            <div class="tentangBlue Horizon">
-                <h3>Tentang Blue Horizon</h3>
-                <br>
-                <a class="BlueHorizonProf" href="home.html">
-                    <p>Profil Perusahaan</p>
-                </a>
             </div>
             <div class="services">
                 <h3>Service</h3>
                 <br>
-                <a class="BlueHorizonProf" href="#">
+                <a class="BlueHorizonProf" href="index.php#Facility">
                     <p>Fasilitas Kami</p>
                 </a>
             </div>
         </div>
-        <br><br>
     </div>
 
     </div>
     <div class="footer">
-        <p>Copyright © 2023 PT. Blue Horizon Resort. All Rights Reserved to beloved Section Bandung 16</p>
+        <p>Copyright © 2024</p>
     </div>
     </div>
 

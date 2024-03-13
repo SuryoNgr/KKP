@@ -140,14 +140,6 @@ section {
 
 /* body */
 
-body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    background-color: #87CEEB; /* Warna biru langit */
-    position: relative;
-}
-
 body::before {
     content: '';
     position: absolute;
@@ -160,10 +152,117 @@ body::before {
     clip-path: polygon(100% 0, 100% 100%, 0 50%); /* Bentuk polygon "<" */
 }
 
-.paragraph-container {
-    background-color: #fff; /* Warna latar belakang putih */
-    padding: 20px; /* Padding untuk jarak antara teks dan batas kontainer */
-    border-radius: 10px; /* Memunculkan border-radius untuk sudut kontainer */
-    width: 80%; /* Lebar kontainer paragraf */
-    margin: 50px auto; /* Margins untuk penempatan di tengah */
+.artikel-pertama{
+    background-color: #104C97;
+    color: #fff;
+    padding: 40px;
+    margin-top: 8%;
+    margin-left: 8%;
+    margin-right: 55%;
+    font-size: 10px;
+}
+
+.artikel-kedua{
+    background-color: #104C97;
+    color: #fff;
+    padding: 40px;
+    margin-top: -8%;
+    margin-left: 55%;
+    margin-right: 8%;
+    font-size: 12px;
+}
+
+.artikel-ketiga{
+    background-color: #104C97;
+    color: #fff;
+    padding: 40px;
+    margin-top: 0%;
+    margin-left: 8%;
+    margin-right: 55%;
+    font-size: 13px;
+}
+
+/* footer */
+
+.aboutFooter {
+    background-color: #fff;
+    padding: 5rem 5%;
+}
+
+.aboutFooter h3 {
+    font-weight: bolder;
+    font-size: 1.8rem;
+    margin-top: 20px;
+}
+
+.footer-alamat {
+    display: flex;
+    font-size: 1.4rem;
+    flex-direction: row;
+    gap: 70px;
+    color: #111;
+}
+
+.kantorPusat {
+    width: 50%;
+}
+
+.tentangBlueHorizon,
+P {
+    line-height: 20px;
+}
+
+.BlueHorizonProf {
+    text-decoration: none;
+    /* Menghilangkan underline */
+    color: #111;
+    /* Warna teks normal */
+    transition: color 0.3s ease;
+    /* Transisi perubahan warna teks */
+}
+
+.BlueHorizonProf:hover {
+    cursor: pointer;
+    color: #104c97;
+    /* Warna teks saat hover */
+}
+
+.services {
+    width: 20%;
+}
+
+.aboutFooter .share {
+    padding-top: 2rem;
+    text-align: center;
+}
+
+.aboutFooter .share a {
+    color: var(--primary);
+    font-size: 2rem;
+    width: 5rem;
+    height: 5rem;
+    line-height: 5rem;
+    border-radius: 50%;
+    border: .1rem solid var(--primary);
+    margin: .3rem;
+}
+
+.aboutFooter .share a:hover {
+    color: var(--white);
+    background: var(--primary);
+    transform: rotate(360deg);
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
+    background-color: #104c97;
+    padding: 20px 50px;
+}
+
+.footer p {
+    color: #fff;
+    text-align: center;
 }

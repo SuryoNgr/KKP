@@ -16,15 +16,8 @@
    <!-- custom css link -->
    <link rel="stylesheet" href="assets/css/artikel.css">
    <style>
-    body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    background-color: #87CEEB; /* Warna biru langit */
-    position: relative;
-}
-
-    body::before {
+ 
+ body::before {
     content: '';
     position: absolute;
     top: 0;
@@ -36,27 +29,6 @@
     clip-path: polygon(100% 0, 100% 100%, 0 50%); /* Bentuk polygon "<" */
 }
 
-h1 {
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 48px; /* Ukuran judul disesuaikan */
-    color: #fff; /* Warna teks putih */
-    text-align: center;
-    position: absolute;
-    top: 80px; /* Jarak judul dari atas (sesuaikan dengan tinggi navigasi) */
-    left: 0;
-    right: 0;
-    z-index: 1;
-}
-
-.header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    background-color:  #00008B; /* Warna latar belakang navigasi */
-    z-index: 2;
-    padding: 10px 20px; /* Padding untuk navigasi */
-}
    </style>
 </head>
 
@@ -73,15 +45,68 @@ h1 {
                 <li><a style="text-decoration:none" href="pemesanan.html">Book now</a></li>
                 <li><a style="text-decoration:none" href="#information">Information</a>
                     <ul>
-                        <li><a style="text-decoration:none" href="contact-us.html">Contact us</a></li>
-                        <li><a style="text-decoration:none" href="about-us.html">About us</a></li>
+                        <li><a style="text-decoration:none" href="contact-us.php">Contact us</a></li>
+                        <li><a style="text-decoration:none" href="about-us.php">About us</a></li>
                     </ul>
                 </li>
             </ul>
         </nav>
         <div id="menu-btn" class="fas fa-bars"></div>
     </header>
-    <h1>Blue Horizon</h1>
-</body>
+<p class="artikel-pertama">
+<b>Mengenal Blue Horizon:</b>
+Web Pemesanan Hotel yang Memudahkan
+Pada era digital saat ini, kemudahan dalam memesan akomodasi menjadi salah satu
+kebutuhan penting bagi para wisatawan dan pelancong bisnis. Dengan munculnya aplikasi
+pemesanan hotel, seperti Blue Horizon, proses pencarian dan reservasi kamar hotel menjadi
+lebih efisien dan nyaman. Blue Horizon adalah sebuah web aplikasi yang dirancang untuk
+memberikan pengalaman terbaik dalam memesan hotel, dengan berbagai fitur yang
+memudahkan pengguna dalam menemukan dan memesan akomodasi sesuai kebutuhan
+mereka.
+</p>
 
+<p class="artikel-kedua">
+<b>Pencarian yang Cepat dan Akurat</b>
+Dengan fitur pencarian canggih, Blue Horizon memungkinkan pengguna untuk menemukan
+hotel dengan cepat dan akurat sesuai dengan preferensi mereka. Pengguna dapat mencari
+hotel yang spesifik, seperti tanggal menginap, jumlah tamu, dan kriteria lainnya,
+sehingga memastikan bahwa mereka mendapatkan akomodasi yang sesuai dengan kebutuhan
+mereka.
+</p>
+
+<p class="artikel-ketiga">
+<b>Layanan Pelanggan yang Ramah</b>
+Blue Horizon juga menawarkan layanan pelanggan yang ramah dan responsif. Tim dukungan
+pelanggan tersedia untuk membantu pengguna dengan pertanyaan atau masalah yang
+mungkin mereka hadapi selama proses pemesanan atau selama masa menginap di hotel.
+
+
+<!-- footer -->
+<br>
+    <div class="aboutFooter">
+        <img src="assets/images/index/blueHorizonlogoBlue.png" alt="Logo Resort" width="25%">
+        <div class="footer-alamat">
+            <div class="kantorPusat">
+                <br>
+                <p>Jl. Mt Al Muhsinin No.20, RT.2/RW.1, Sukamaju, Kec. Cilodong, Kota Depok, Jawa Barat 16415</p>
+                <p>Contact center. (0360)161616</p>
+            </div>
+            <div class="services">
+                <h3>Service</h3>
+                <br>
+                <a class="BlueHorizonProf" href="index.php#Facility">
+                    <p>Fasilitas Kami</p>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    </div>
+    <div class="footer">
+        <p>Copyright © 2024</p>
+    </div>
+    </div>
+
+    <!-- end -->
+</body>
 </html>

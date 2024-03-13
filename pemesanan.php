@@ -34,8 +34,8 @@
                 <li><a style="text-decoration:none" href="pemesanan.html">Book now</a></li>
                 <li><a style="text-decoration:none" href="#information">Information</a>
                     <ul>
-                        <li><a style="text-decoration:none" href="contact-us.html">Contact us</a></li>
-                        <li><a style="text-decoration:none" href="about-us.html">About us</a></li>
+                        <li><a style="text-decoration:none" href="contact-us.php">Contact us</a></li>
+                        <li><a style="text-decoration:none" href="about-us.php">About us</a></li>
                     </ul>
                 </li>
             </ul>
@@ -52,7 +52,7 @@
       <div class="swiper home-slider">
 
          <div class="swiper-wrapper">
-            <div class="swiper-slide slide" style="background: url(assets/images/index/Swim.png) no-repeat;">
+            <div class="swiper-slide slide" style="background: url(assets/images/index/home-slide2.png) no-repeat;">
                <div class="content">
                   <h3>Blue Horizon</h3>
                </div>
@@ -119,85 +119,74 @@
 
       <h1 class="heading">our room</h1>
 
-      <div class="swiper room-slider">
+      <div class="swiper room-slider" id="room-slider">
+   <div class="swiper-wrapper">
 
-         <div class="swiper-wrapper">
-
-            <div class="swiper-slide slide">
-               <div class="image">
-                  <span class="price">$15.99/night</span>
-                  <img src="assets/images/index/room-1.jpg" alt="">
-               </div>
-               <div class="content">
-                  <h3>exclusive room</h3>
-                  <p>offers a luxurious and exclusive stay experience.
-                     With 24-hour room service, luxurious interiors and premium amenities,
-                     this room is perfect for guests looking for an unparalleled stay.</p>
-                  <a href="#reservation" class="btn">book now</a>
-               </div>
-            </div>
-
-            <div class="swiper-slide slide">
-               <div class="image">
-                  <span class="price">$15.99/night</span>
-                  <img src="assets/images/index/room-2.jpg" alt="">
-               </div>
-               <div class="content">
-                  <h3>familiy room</h3>
-                  <p>designed to accommodate families. With spacious space and child-friendly facilities,
-                     this room is suitable for families who want to enjoy quality time together in comfort and luxury.
-                  </p>
-                  <a href="#reservation" class="btn">book now</a>
-               </div>
-            </div>
-
-            <div class="swiper-slide slide">
-               <div class="image">
-                  <span class="price">$15.99/night</span>
-                  <img src="assets/images/index/room-3.jpg" alt="">
-               </div>
-               <div class="content">
-                  <h3>daily room</h3>
-                  <p>designed for everyday comfort. With complete facilities and soothing interior decoration,
-                     this room is suitable for guests who are looking for simple but comfortable accommodation during
-                     their stay.</p>
-                  <a href="#reservation" class="btn">book now</a>
-               </div>
-            </div>
-
-            <div class="swiper-slide slide">
-               <div class="image">
-                  <span class="price">$15.99/night</span>
-                  <img src="assets/images/index/room-4.jpg" alt="">
-               </div>
-               <div class="content">
-                  <h3>panoramic room</h3>
-                  <p>offers stunning panoramic views. Suitable for guests who want to enjoy beautiful views of the
-                     sunrise
-                     or sunset directly from the comfort of their room.</p>
-                  <a href="#reservation" class="btn">book now</a>
-               </div>
-            </div>
-
-            <div class="swiper-slide slide">
-               <div class="image">
-                  <span class="price">$15.99/night</span>
-                  <img src="assets/images/index/room-5.jpg" alt="">
-               </div>
-               <div class="content">
-                  <h3>honey room</h3>
-                  <p>This room is specially designed for couples on their honeymoon or celebrating romantic moments.
-                     With an intimate atmosphere and luxurious facilities, Honey Room promises an unforgettable
-                     experience.</p>
-                  <a href="#reservation" class="btn">book now</a>
-               </div>
-            </div>
-
+   <div class="swiper-slide slide">
+         <div class="image">
+            <span class="price">500.000/night</span>
+            <img src="assets/images/index/room-2.jpg" alt="">
          </div>
-
-         <div class="swiper-pagination"></div>
-
+         <div class="content">
+            <h3>basic room</h3>
+            <p>designed to accommodate single person to just want to stay a night. With decent furnishings and decoration also with complete furniture.</p>
+            <a href="#reservation" class="btn">book now</a>
+         </div>
       </div>
+
+      <div class="swiper-slide slide">
+         <div class="image">
+            <span class="price">1.000.000/night</span>
+            <img src="assets/images/index/room-3.jpg" alt="">
+         </div>
+         <div class="content">
+            <h3>daily room</h3>
+            <p>designed for everyday comfort. With complete facilities and soothing interior decoration, this room is suitable for guests who are looking for simple but comfortable accommodation during their stay.</p>
+            <a href="#reservation" class="btn">book now</a>
+         </div>
+      </div>
+
+      <div class="swiper-slide slide">
+         <div class="image">
+            <span class="price">1.500.000/night</span>
+            <img src="assets/images/index/room-4.jpg" alt="">
+         </div>
+         <div class="content">
+            <h3>panoramic room</h3>
+            <p>offers stunning panoramic views. Suitable for guests who want to enjoy beautiful views of the city from the comfort of their room.</p>
+            <a href="#reservation" class="btn">book now</a>
+         </div>
+      </div>
+
+
+      <div class="swiper-slide slide">
+         <div class="image">
+            <span class="price">2.000.000/night</span>
+            <img src="assets/images/index/room-1.jpg" alt="">
+         </div>
+         <div class="content">
+            <h3>exclusive room</h3>
+            <p>offers a luxurious and exclusive stay experience. With 24-hour room service, luxurious interiors and premium amenities, this room is perfect for guests looking for an unparalleled stay.</p>
+            <a href="pemesanan.php#reservation" class="btn">book now</a>
+         </div>
+      </div>
+
+      <div class="swiper-slide slide">
+         <div class="image">
+            <span class="price">2.500.000/night</span>
+            <img src="assets/images/index/room-5.jpg" alt="">
+         </div>
+         <div class="content">
+            <h3>honey room</h3>
+            <p>This room is specially designed for couples on their honeymoon or celebrating romantic moments. With an intimate atmosphere and luxurious facilities, Honey Room promises an unforgettable experience.</p>
+            <a href="#reservation" class="btn">book now</a>
+         </div>
+      </div>
+   </div>
+
+   <div class="swiper-pagination"></div>
+</div>
+
 
    </section>
 
@@ -291,7 +280,7 @@
 
    <!-- reservation -->
 
-   <section class="reservation">
+   <section class="reservation" id="reservation">
 
       <h1 class="heading">book now</h1>
 
@@ -369,18 +358,20 @@
             </div>
 
          </div>
-          <input type="button" value="booking now" class="btn" onclick="showPopup()">
+         <div class="button-container">
+            <input type="button" value="booking now" class="btn" onclick="showPopup()">
+         </div>
           <div class="overlay" id="overlay"></div>
-<div class="popup" id="popup">
-  <h2>Rincian Pilihan & Total Harga</h2>
-  <br>
-  <div id="rincian"></div>
-  <div id="total"></div>
-  <div id="btn-popup">
-  <input type="button" value="Batal" class="btn" onclick="hidePopup()">
-   <input type="submit" value="Submit" class="btn">
-   </div>
-</div>
+            <div class="popup" id="popup">
+            <h2>Rincian Pilihan & Total Harga</h2>
+            <br>
+            <div id="rincian"></div>
+            <div id="total"></div>
+            <div id="btn-popup">
+            <input type="button" value="Batal" class="btn" onclick="hidePopup()">
+               <input type="submit" value="Submit" class="btn">
+               </div>
+            </div>
 
    
       </form>
@@ -413,45 +404,33 @@
    <!-- end -->
 
 
-   <!-- footer -->
-   <br>
-   <div class="aboutFooter">
-      <img src="assets/images/index/blueHorizonlogoBlue.png" alt="Logo Resort" width="25%">
-      <div class="footer-alamat">
-         <div class="kantorPusat">
-            <h3>KANTOR PUSAT</h3>
-            <br>
-            <p>PT. Cakrawala Biru</p>
-            <p>Jl. DR. Ide Anak Agung Gde Agung, Daerah Khusus Ibukota Jakarta</p>
-            <p>Contact center. 089513891995</p>
-         </div>
-         <div class="tentangBlue Horizon">
-            <h3>Tentang Blue Horizon</h3>
-            <br>
-            <a class="BlueHorizonProf" href="home.html">
-               <p>Profil Perusahaan</p>
-            </a>
-         </div>
-         <div class="services">
-            <h3>Service</h3>
-            <br>
-            <a class="BlueHorizonProf" href="#">
-               <p>Fasilitas Kami</p>
-            </a>
-         </div>
-      </div>
-      <br><br>
-   </div>
+<!-- footer -->
+<br>
+    <div class="aboutFooter">
+        <img src="assets/images/index/blueHorizonlogoBlue.png" alt="Logo Resort" width="25%">
+        <div class="footer-alamat">
+            <div class="kantorPusat">
+                <br>
+                <p>Jl. Mt Al Muhsinin No.20, RT.2/RW.1, Sukamaju, Kec. Cilodong, Kota Depok, Jawa Barat 16415</p>
+                <p>Contact center. (0360)161616</p>
+            </div>
+            <div class="services">
+                <h3>Service</h3>
+                <br>
+                <a class="BlueHorizonProf" href="index.php#Facility">
+                    <p>Fasilitas Kami</p>
+                </a>
+            </div>
+        </div>
+    </div>
 
-   </div>
-   <div class="footer">
-      <p>Copyright © 2023 PT. Blue Horizon Resort. All Rights Reserved to beloved Section Bandung 16</p>
-   </div>
-   </div>
+    </div>
+    <div class="footer">
+        <p>Copyright © 2024</p>
+    </div>
+    </div>
 
-
-
-   <!-- end -->
+    <!-- end -->
 
 
    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>

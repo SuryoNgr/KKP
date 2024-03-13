@@ -678,7 +678,13 @@ P {
   .container {
     width: 80%;
     margin: 0 auto;
+    align-items: center;
   }
+
+  .button-container {
+    margin-top: 20px; /* Atur jarak antara formulir dan tombol */
+    text-align: center; /* Pusatkan tombol horizontal */
+ }
   
   .input {
     width: 100%;
