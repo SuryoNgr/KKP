@@ -17,6 +17,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
+        <meta name="referrer" content="no-referrer">
         <title>Hotel Blue Horizon</title>
         <!-- Favicon-->
         <link rel="icon" type="image/x-icon" href="../assets/images/icon/favicon.ico" />
@@ -24,18 +25,20 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
         <!-- Core theme CSS (includes Bootstrap)-->
          <link href="../assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+        
          
 
     </head>
     <body class="d-flex flex-column min-vh-100" style="height: 100%">
        <?php include 'navbar.php' ?>
-       
-<section>
 
-    <h1>KOSONG</h1>
+
+<section>
+    <h1>Laporan Pemesanan</h1>
+    <button class="btn btn-outline" onclick="printExternalPage()"><i class="fa-solid fa-print custom-icon"></i></button>
 
 </section>
-
       
 
 
@@ -60,5 +63,15 @@
         <script src="../assets/js/main2.js"></script>
         <!-- Core theme JS-->
         <script src="../assets/js/scripts.js"></script>
+        <script>
+    function printExternalPage() {
+        const url = 'print_lapor.php';
+        const externalWindow = window.open(url, '_blank');
+        externalWindow.onload = function() {
+            externalWindow.print();
+        };
+    }
+</script>
+
     </body>
 </html>
