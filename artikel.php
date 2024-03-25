@@ -54,12 +54,12 @@
         <div id="menu-btn" class="fas fa-bars"></div>
     </header>
 <p class="artikel-pertama">
-<b>Mengenal Blue Horizon:</b>
+<b>Mengenal XYZ Hotel:</b>
 Web Pemesanan Hotel yang Memudahkan
 Pada era digital saat ini, kemudahan dalam memesan akomodasi menjadi salah satu
 kebutuhan penting bagi para wisatawan dan pelancong bisnis. Dengan munculnya aplikasi
-pemesanan hotel, seperti Blue Horizon, proses pencarian dan reservasi kamar hotel menjadi
-lebih efisien dan nyaman. Blue Horizon adalah sebuah web aplikasi yang dirancang untuk
+pemesanan hotel, seperti XYZ Hotel, proses pencarian dan reservasi kamar hotel menjadi
+lebih efisien dan nyaman. XYZ Hotel adalah sebuah web aplikasi yang dirancang untuk
 memberikan pengalaman terbaik dalam memesan hotel, dengan berbagai fitur yang
 memudahkan pengguna dalam menemukan dan memesan akomodasi sesuai kebutuhan
 mereka.
@@ -67,7 +67,7 @@ mereka.
 
 <p class="artikel-kedua">
 <b>Pencarian yang Cepat dan Akurat</b>
-Dengan fitur pencarian canggih, Blue Horizon memungkinkan pengguna untuk menemukan
+Dengan fitur pencarian canggih, XYZ Hotel memungkinkan pengguna untuk menemukan
 hotel dengan cepat dan akurat sesuai dengan preferensi mereka. Pengguna dapat mencari
 hotel yang spesifik, seperti tanggal menginap, jumlah tamu, dan kriteria lainnya,
 sehingga memastikan bahwa mereka mendapatkan akomodasi yang sesuai dengan kebutuhan
@@ -76,7 +76,7 @@ mereka.
 
 <p class="artikel-ketiga">
 <b>Layanan Pelanggan yang Ramah</b>
-Blue Horizon juga menawarkan layanan pelanggan yang ramah dan responsif. Tim dukungan
+XYZ Hotel juga menawarkan layanan pelanggan yang ramah dan responsif. Tim dukungan
 pelanggan tersedia untuk membantu pengguna dengan pertanyaan atau masalah yang
 mungkin mereka hadapi selama proses pemesanan atau selama masa menginap di hotel.
 

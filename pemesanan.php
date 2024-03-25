@@ -385,20 +385,18 @@
    <!-- promo -->
 
    <body>
-      <div class="promo">
-         <h1 class="heading">Have a Promo Code?</h1>
-         <form id="code-form">
-            <input type="code" name="code" id="code-field" class="code-form-field" placeholder="Enter Your Code">
+    <div class="promo">
+        <h1 class="heading">Have a Promo Code?</h1>
+        <form id="code-form">
+            <input type="text" name="code" id="code-field" class="code-form-field" placeholder="Enter Your Code">
             <input type="submit" value="Reedem" id="code-form-submit">
-         </form>
+        </form>
 
-         <div class="message">
-            <div id="code-acc-msg-holder">
-               <p id="code-acc-msg">Code Accepted!</p>
-            </div>
-         </div>
-      </div>
-   </body>
+        <div class="message" id="code-acc-msg-holder" style="display: none;">
+            <p id="code-acc-msg"></p>
+        </div>
+    </div>
+</body>
    <br>
 
    <!-- end -->

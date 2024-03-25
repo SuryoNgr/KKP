@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
     <head>
-        <title>Hotel Blue Horizon</title>
+        <title>XYZ Hotel</title>
         <!-- Required meta tags -->
         <link rel="icon" href="assets/images/index/iconLogo.png" >
         <meta charset="utf-8" />
@@ -39,7 +39,7 @@
                 <li><a style="text-decoration:none" href="#information">Information</a>
                     <ul>
                         <li><a style="text-decoration:none" href="contact-us.php">Contact us</a></li>
-                        <li><a style="text-decoration:none" href="about-us.php">About us</a></li>
+                        <li><a style="text-decoration:none" href="artikel.php">About us</a></li>
                     </ul>
                 </li>
             </ul>
@@ -58,22 +58,22 @@
                 </div>
                 <div class="swiper-slide slide" style="background: url(assets/images/index/Pool-Aerial.png) no-repeat;">
                     <div class="content">
-                        <h3>Blue Horizon</h3>
+                        <h3>XYZ Hotel</h3>
                     </div>
                 </div>
                 <div class="swiper-slide slide" style="background: url(assets/images/index/home-slide2.png) no-repeat;">
                     <div class="content">
-                        <h3>Blue Horizon</h3>
+                        <h3>XYZ Hotel</h3>
                     </div>
                 </div>
                 <div class="swiper-slide slide" style="background: url(assets/images/index/home-slide3.png) no-repeat;">
                     <div class="content">
-                        <h3>Blue Horizon</h3>
+                        <h3>XYZ Hotel</h3>
                     </div>
                 </div>
                 <div class="swiper-slide slide" style="background: url(assets/images/index/home-slide4.png) no-repeat;">
                     <div class="content">
-                        <h3>Blue Horizon</h3>
+                        <h3>XYZ Hotel</h3>
                     </div>
                 </div>
                 <div class="swiper-slide slide" style="background: url(assets/images/index/kodePromo2.png) no-repeat;">
@@ -91,7 +91,7 @@
             <p>Welcome, embrace the day with joy!</p>
         </span>
         <div class="text">
-            Discover peace and excitement at Blue Horizon. Your extraordinary journey begins here.
+            Discover peace and excitement at XYZ Hotel. Your extraordinary journey begins here.
         </div>
     </div>
     <div class="fasilitas" id="Facility">
@@ -127,7 +127,7 @@
                 <h1>Meeting Event and Weedings</h1>
                 <br />
                 <p class="text">
-                    "Host your next event in Blue Horizon. Our versatile spaces allow all combinations,
+                    "Host your next event in XYZ Hotel. Our versatile spaces allow all combinations,
                     from small meetings, regional conferences, and international gatherings to gala dinners,
                     spectacular hotel weddings, and dinners for up to 250 people."
                 </p>
