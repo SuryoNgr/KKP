@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us Page</title>
+    <title>Contact Us XYZ Hotel</title>
     <link rel="icon" href="images/iconLogo.png" >
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
     <link rel="stylesheet" href="assets/css/contact-us.css">
@@ -42,7 +42,7 @@
     <div class="faqs-container">
         <div class="faq active">
             <h3 class="faq-title">
-                What is Blue Horizon?
+                What is XYZ Hotel?
             </h3>
             <p class="faq-text">
                 a Hotel located in Depok, West Java, with views of the city.
@@ -71,10 +71,10 @@
 
         <div class="faq">
             <h3 class="faq-title">
-                Can I Host Events Or Conferences At Blue Horizon?
+                Can I Host Events Or Conferences At XYZ Hotel?
             </h3>
             <p class="faq-text">
-                Yes, Blue Horizon can hold weddings and other formal events.
+                Yes, XYZ Hotel can hold weddings and other formal events.
                 Contact our team to discuss your specifications and requests and make the moment memorable.
             </p>
             <button class="faq-toggle">

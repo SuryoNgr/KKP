@@ -6,7 +6,7 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Hotel Blue Horizon</title>
+   <title>XYZ Hotel</title>
    <link rel="icon" href="images/iconLogo.png" >
    <!-- font awesome cdn link  -->
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
@@ -30,12 +30,12 @@
             <ul>
                 <li><a style="text-decoration:none" href="index.php#home">Home</a></li>
                 <li><a style="text-decoration:none" href="index.php#Facility">Facility</a></li>
-                <li><a style="text-decoration:none" href="pemesanan.html">Room</a></li>
-                <li><a style="text-decoration:none" href="pemesanan.html">Book now</a></li>
+                <li><a style="text-decoration:none" href="pemesanan.php">Room</a></li>
+                <li><a style="text-decoration:none" href="pemesanan.php">Book now</a></li>
                 <li><a style="text-decoration:none" href="#information">Information</a>
                     <ul>
                         <li><a style="text-decoration:none" href="contact-us.php">Contact us</a></li>
-                        <li><a style="text-decoration:none" href="about-us.php">About us</a></li>
+                        <li><a style="text-decoration:none" href="artikel.php">About us</a></li>
                     </ul>
                 </li>
             </ul>
@@ -54,24 +54,24 @@
          <div class="swiper-wrapper">
             <div class="swiper-slide slide" style="background: url(assets/images/index/home-slide2.png) no-repeat;">
                <div class="content">
-                  <h3>Blue Horizon</h3>
+                  <h3>XYZ Hotel</h3>
                </div>
             </div>
             <div class="swiper-slide slide" style="background: url(assets/images/index/Pool-Aerial.png) no-repeat;">
                <div class="content">
-                  <h3>Blue Horizon</h3>
+                  <h3>XYZ Hotel</h3>
                </div>
             </div>
             <div class="swiper-slide slide" style="background: url(assets/images/index/kodePromo1.png) no-repeat;">
             </div>
             <div class="swiper-slide slide" style="background: url(assets/images/index/home-slide3.png) no-repeat;">
                <div class="content">
-                  <h3>Blue Horizon</h3>
+                  <h3>XYZ Hotel</h3>
                </div>
             </div>
             <div class="swiper-slide slide" style="background: url(assets/images/index/home-slide4.png) no-repeat;">
                <div class="content">
-                  <h3>Blue Horizon</h3>
+                  <h3>XYZ Hotel</h3>
                </div>
             </div>
             <div class="swiper-slide slide" style="background: url(assets/images/index/kodePromo2.png) no-repeat;">
@@ -379,27 +379,6 @@
    </section>
    <!-- Popup -->
 
-
-   <!-- end -->
-
-   <!-- promo -->
-
-   <body>
-    <div class="promo">
-        <h1 class="heading">Have a Promo Code?</h1>
-        <form id="code-form">
-            <input type="text" name="code" id="code-field" class="code-form-field" placeholder="Enter Your Code">
-            <input type="submit" value="Reedem" id="code-form-submit">
-        </form>
-
-        <div class="message" id="code-acc-msg-holder" style="display: none;">
-            <p id="code-acc-msg"></p>
-        </div>
-    </div>
-</body>
-   <br>
-
-   <!-- end -->
 
 
 <!-- footer -->
