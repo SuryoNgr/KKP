@@ -54,6 +54,7 @@
             <div class="swiper-wrapper">
                 <div class="swiper-slide slide" style="background: url(assets/images/index/kodePromo1.png) no-repeat;">
                     <div class="content">
+                        <h3>XYZ Hotel</h3>
                     </div>
                 </div>
                 <div class="swiper-slide slide" style="background: url(assets/images/index/Pool-Aerial.png) no-repeat;">
@@ -77,6 +78,9 @@
                     </div>
                 </div>
                 <div class="swiper-slide slide" style="background: url(assets/images/index/kodePromo2.png) no-repeat;">
+                    <div class="content">
+                        <h3>XYZ Hotel</h3>
+                    </div>
                 </div>
             </div>
             <div class="swiper-button-next"></div>
