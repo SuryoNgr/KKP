@@ -67,27 +67,10 @@ var roomSwiper = new Swiper(".swiper.room-slider", {
   },
 });
 
-const CodeForm = document.getElementById("code-form");
-const ReedemButton = document.getElementById("code-form-submit");
-const CodeAccMsg = document.getElementById("code-acc-msg");
-
-ReedemButton.addEventListener("click", async (e) => {
-  e.preventDefault();
-
-  const code = CodeForm.code.value;
-  if (code === "hotel" || code === "BANDUNG16") {
-    alert("You Successfully Redeemed Code");
-    location.reload();
-  } else {
-    CodeAccMsg.style.opacity = 1;
-  }
-});
-
 //tambah ruang pilihan ruang bertambah
 document.addEventListener("DOMContentLoaded", function() {
         var roomsSelect = document.getElementById("rooms");
         var roomTypeContainer = document.querySelector(".room-type-container");
-
         // Fungsi untuk menambahkan kotak room type sesuai dengan jumlah kamar yang dipilih
         function addRoomTypeBoxes(numRooms) {
             // Kosongkan container terlebih dahulu
@@ -108,10 +91,8 @@ document.addEventListener("DOMContentLoaded", function() {
                 roomTypeContainer.appendChild(roomTypeBox);
             }
         }
-
         // Panggil fungsi untuk pertama kali
         addRoomTypeBoxes(parseInt(roomsSelect.value));
-
         // Tambahkan event listener untuk perubahan pada pilihan 'rooms'
         roomsSelect.addEventListener("change", function() {
             var numRooms = parseInt(this.value);

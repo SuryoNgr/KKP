@@ -372,14 +372,8 @@
                <input type="submit" value="Submit" class="btn">
                </div>
             </div>
-
-   
       </form>
-
    </section>
-   <!-- Popup -->
-
-
 
 <!-- footer -->
 <br>
