@@ -279,3 +279,53 @@ function hidePopup() {
 document.getElementById('overlay').style.display = 'none';
 document.getElementById('popup').style.display = 'none';
 }
+
+// validate
+function validateEmail(email) {
+  const re = /\S+@\S+\.\S+/;
+  return re.test(String(email).toLowerCase());
+}
+
+function validatePhoneNumber(phoneNumber) {
+  return /^\d+$/.test(phoneNumber);
+}
+
+function validateAccountNumber(accountNumber) {
+  return /^\d{10,}$/.test(accountNumber);
+}
+
+document.getElementById('email').addEventListener('input', function() {
+  const emailInput = this.value.trim();
+  const emailError = document.getElementById('email-error');
+  if (!validateEmail(emailInput)) {
+      emailError.textContent = "Email tidak valid";
+      this.classList.add('input-error');
+  } else {
+      emailError.textContent = "";
+      this.classList.remove('input-error');
+  }
+});
+
+document.getElementById('notelp').addEventListener('input', function() {
+  const phoneInput = this.value.trim();
+  const phoneError = document.getElementById('notelp-error');
+  if (!validatePhoneNumber(phoneInput)) {
+      phoneError.textContent = "Nomor telepon hanya boleh berisi angka";
+      this.classList.add('input-error');
+  } else {
+      phoneError.textContent = "";
+      this.classList.remove('input-error');
+  }
+});
+
+document.getElementById('norek').addEventListener('input', function() {
+  const accountInput = this.value.trim();
+  const accountError = document.getElementById('norek-error');
+  if (!validateAccountNumber(accountInput)) {
+      accountError.textContent = "Nomor rekening harus berisi minimal 10 digit angka";
+      this.classList.add('input-error');
+  } else {
+      accountError.textContent = "";
+      this.classList.remove('input-error');
+  }
+});

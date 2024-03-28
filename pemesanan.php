@@ -296,16 +296,19 @@
             <div class="box">
                <p>email <span>*</span></p>
                <input type="text" class="input" placeholder="Email Anda" id="email" name="email">
+               <span class="error-message" id="email-error"></span>
             </div>
 
             <div class="box">
                <p>nomor telepon <span>*</span></p>
-               <input type="text" class="input" placeholder="Nomor Telepon Anda" id="notelp" name="notelp">
+               <input type="number" class="input" placeholder="Nomor Telepon Anda" id="notelp" name="notelp">
+               <span class="error-message" id="notelp-error"></span>
             </div>
 
             <div class="box">
                <p>nomor rekening <span>*</span></p>
-               <input type="text" class="input" placeholder="Nomor Rekening Anda" id="norek" name="norek">
+               <input type="number" class="input" placeholder="Nomor Rekening Anda" id="norek" name="norek">
+               <span class="error-message" id="norek-error"></span>
             </div>
 
             <div class="box">
