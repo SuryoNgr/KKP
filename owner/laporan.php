@@ -18,7 +18,7 @@
         <meta name="description" content="" />
         <meta name="author" content="" />
         <meta name="referrer" content="no-referrer">
-        <title>Hotel Blue Horizon</title>
+        <title>XYZ Hotel</title>
         <!-- Favicon-->
         <link rel="icon" type="image/x-icon" href="../assets/images/icon/favicon.ico" />
         <!-- Bootstrap icons-->

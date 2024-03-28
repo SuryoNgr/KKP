@@ -8,7 +8,7 @@
 </head>
 <body>
     <div class="navbar">
-        <h1>Blue <span>Horizon</span></h1>
+        <h1>XYZ <span>Hotel</span></h1>
         <div class="subnav">
             
             <ul>

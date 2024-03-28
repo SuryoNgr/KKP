@@ -17,7 +17,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>Hotel Blue Horizon</title>
+        <title>XYZ Hotel</title>
         <!-- Favicon-->
         <link rel="icon" type="image/x-icon" href="../assets/images/icon/favicon.ico" />
         <!-- Bootstrap icons-->
@@ -61,7 +61,7 @@
         <!-- Footer-->
 <footer class="foot">
 <div class="footer-bottom">
-            <p>&copy; 2023 Your Company. All rights reserved.</p>
+            <p>&copy; 2024 Your Company. All rights reserved.</p>
           </div>
 </footer>
         <!-- Bootstrap core JS-->
