@@ -8,6 +8,21 @@
   } 
     } 
 
+//search
+$filter = "";
+if(isset($_POST['search_btn'])) {
+    $search_input = $_POST['search_input'];
+    $search_condition = "WHERE norek_pl LIKE '%$search_input%' OR nama_pl LIKE '%$search_input%'";
+    if(empty($filter)) {
+        $filter = $search_condition;
+    } else {
+        $filter .= " AND " . $search_condition;
+    }
+}
+
+
+$sql = "SELECT * FROM payment $filter ORDER BY checkin ASC";
+$result = $koneksi->query($sql);
 
     ?>
 <!DOCTYPE html>
@@ -35,31 +50,48 @@
 
 
 <section>
+     <form method="post">
+        <button class="btn-sm btn-outline float-right" type="submit" name="search_btn">Search</button>
+        <input class="form-control-sm float-right" type="search" name="search_input" placeholder="Search" aria-label="Search">
+    </form>
     <center>
     <h1>Laporan Pemesanan</h1>
 
-    <?php 
-    $query = "SELECT * FROM payment";
-$result = mysqli_query($koneksi, $query);   
-    echo "<table cellspacing='0' cellpadding='5' border='1'>";
-    echo "<tr><th>Nomor Telephone</th><th>Nama</th><th>Nomor Rekening</th><th>Email</th><th>CheckIn</th><th>CheckOut</th><th>Nomor Ruangan</th><th>Total Bayaran</th></tr>";
-            while ($row = mysqli_fetch_assoc($result)) {
-    echo "<tr>";
-    
-    echo "<td>" . $row['notelp_pl'] . "</td>";
-    echo "<td>" . $row['nama_pl'] . "</td>";
-    echo "<td>" . $row['norek_pl'] . "</td>";
-    echo "<td>" . $row['email_pl'] . "</td>";
-    echo "<td>" . $row['checkin'] . "</td>";
-    echo "<td>" . $row['checkout'] . "</td>";
-    echo "<td>" . $row['id_room'] . "</td>";
-    echo "<td>" . $row['harga_total'] . "</td>";
-    echo "</tr>";
-}
-echo "</table>"; ?>
+    <table>
+        <tr>
+            <th>Nomor Telephone</th>
+            <th>Nama</th>
+            <th>Nomor Rekening</th>
+            <th>Email</th>
+            <th>CheckIn</th>
+            <th>CheckOut</th>
+            <th>Nomor Ruangan</th>
+            <th>Total Bayaran</th>
+        </tr>
+
+        <?php
+        if ($result->num_rows > 0) {
+            while($row = $result->fetch_assoc()) {
+                echo "<tr>";
+                echo "<td>" . $row['notelp_pl'] . "</td>";
+                echo "<td>" . $row['nama_pl'] . "</td>";
+                echo "<td>" . $row['norek_pl'] . "</td>";
+                echo "<td>" . $row['email_pl'] . "</td>";
+                echo "<td>" . $row['checkin'] . "</td>";
+                echo "<td>" . $row['checkout'] . "</td>";
+                echo "<td>" . $row['id_room'] . "</td>";
+                echo "<td>" . $row['harga_total'] . "</td>";
+                echo "</tr>";
+            }
+        } else {
+            echo "<tr><td colspan='6'>No data found</td></tr>";
+        }
+        $koneksi->close();
+        ?>
+    </table>
    
     </center>
-    <div style="padding: 20px;margin-left: 190px">
+    <div style="padding: 20px">
          <button class="btn btn-outline" onclick="printExternalPage()"><i class="fa-solid fa-print custom-icon"></i></button>
     </div>
 </section>

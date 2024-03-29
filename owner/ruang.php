@@ -43,32 +43,7 @@ $result = $koneksi->query($sql);
     
     <link href="../assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="../assets/css/navbar.css">
-    <style>
-        table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-        th, td {
-            border: 1px solid #dddddd;
-            text-align: left;
-            padding: 8px;
-        }
-        th {
-            background-color: #f2f2f2;
-        }
-        .popup {
-            display: none;
-            position: fixed;
-            left: 50%;
-            top: 50%;
-            transform: translate(-50%, -50%);
-            border: 1px solid #ccc;
-            background-color: #f9f9f9;
-            padding: 20px;
-            z-index: 9999;
-            border-radius: 5px;
-        }
-    </style>
+    
 </head>
 <body>
 <?php include 'navbar.php' ?>
