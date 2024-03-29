@@ -14,7 +14,6 @@
             <ul>
                 <li><a href="halaman_owner.php">Home</a></li>
                 <li><a href="laporan.php">Laporan</a></li>
-                <li><a href="regisAdm.php">Tambah Staff</a></li>
                 <li><a href="ruang.php">Kamar</a></li>
             </ul>
             <div class="user-info">
