@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 29, 2024 at 02:41 PM
+-- Generation Time: Mar 25, 2024 at 11:35 AM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 8.0.13
 
@@ -68,10 +68,15 @@ CREATE TABLE `payment` (
 --
 
 INSERT INTO `payment` (`id_payment`, `notelp_pl`, `nama_pl`, `norek_pl`, `email_pl`, `checkin`, `checkout`, `jumlah_tamu`, `id_room`, `harga_total`) VALUES
-(26, '212123', 'Rahman', '2123123123', 'rahman.nugroohoo@gmail.com', '2024-02-29', '2024-03-01', 1, 'BR001', 500000),
-(27, '212123', 'Rahman2', '2123123123', 'rahman.nugroohoo2@gmail.com', '2024-02-29', '2024-03-01', 1, 'DR001', 1000000),
-(28, '212123', 'Rahman3', '2123123123', 'rahman.nugroohoo3@gmail.com', '2024-02-29', '2024-03-01', 1, 'PR001', 1500000),
-(29, '212123', 'Rahman4', '2123123123', 'rahman.nugroohoo4@gmail.com', '2024-02-29', '2024-03-01', 1, 'HR001', 2500000);
+(36, '222', 'suryo', '2222222222', 'suryo.nugroohoo@gmail.com', '2024-03-05', '2024-03-08', 5, 'ER001', 6000000),
+(37, '222', 'suryo', '2222222222', 'suryo.nugroohoo@gmail.com', '2024-03-05', '2024-03-08', 5, 'BR001', 1500000),
+(38, '222', 'suryo', '2222222222', 'suryo.nugroohoo@gmail.com', '2024-03-05', '2024-03-08', 5, 'DR001', 3000000),
+(39, '222', 'suryo', '2222222222', 'suryo.nugroohoo@gmail.com', '2024-03-05', '2024-03-08', 5, 'PR001', 4500000),
+(40, '222', 'suryo', '2222222222', 'suryo.nugroohoo@gmail.com', '2024-03-05', '2024-03-08', 5, 'HR001', 7500000),
+(41, '02220', 'sam', '333333', 'sam@hmail.com', '2024-03-05', '2024-03-06', 1, 'ER001', 2000000),
+(42, '02220', 'sam', '333333', 'sam@hmail.com', '2024-03-05', '2024-03-06', 1, 'BR001', 500000),
+(43, '02220', 'sam2', '3333333', 'sam@hmail.com', '2024-03-05', '2024-03-06', 1, 'BR002', 500000),
+(44, '08959595', 'sarba', '111111111111', 'sarba@hassa.com', '2024-03-08', '2024-03-11', 1, 'ER001', 6000000);
 
 -- --------------------------------------------------------
 
@@ -84,6 +89,16 @@ CREATE TABLE `pelanggan` (
   `nama_pl` varchar(30) NOT NULL,
   `harga_keseluruhan` int(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `pelanggan`
+--
+
+INSERT INTO `pelanggan` (`norek_pl`, `nama_pl`, `harga_keseluruhan`) VALUES
+('111111111111', 'sarba', 6000000),
+('2222222222', 'suryo', 22500000),
+('333333', 'sam', 2000000),
+('3333333', 'sam2', 500000);
 
 -- --------------------------------------------------------
 
@@ -103,27 +118,27 @@ CREATE TABLE `room` (
 --
 
 INSERT INTO `room` (`id_room`, `tipe_room`, `harga_room`, `status`) VALUES
-('BR001', 'Basic', 500000, 'Booked'),
+('BR001', 'Basic', 500000, 'Available'),
 ('BR002', 'Basic', 500000, 'Available'),
 ('BR003', 'Basic', 500000, 'Available'),
 ('BR004', 'Basic', 500000, 'Available'),
 ('BR005', 'Basic', 500000, 'Available'),
-('DR001', 'Daily', 1000000, 'Booked'),
+('DR001', 'Daily', 1000000, 'Available'),
 ('DR002', 'Daily', 1000000, 'Available'),
 ('DR003', 'Daily', 1000000, 'Available'),
 ('DR004', 'Daily', 1000000, 'Available'),
 ('DR005', 'Daily', 1000000, 'Available'),
-('ER001', 'Exclusive', 2000000, 'Available'),
+('ER001', 'Exclusive', 2000000, 'Booked'),
 ('ER002', 'Exclusive', 2000000, 'Available'),
 ('ER003', 'Exclusive', 2000000, 'Available'),
 ('ER004', 'Exclusive', 2000000, 'Available'),
 ('ER005', 'Exclusive', 2000000, 'Available'),
-('HR001', 'Honey', 2500000, 'Booked'),
+('HR001', 'Honey', 2500000, 'Available'),
 ('HR002', 'Honey', 2500000, 'Available'),
 ('HR003', 'Honey', 2500000, 'Available'),
 ('HR004', 'Honey', 2500000, 'Available'),
 ('HR005', 'Honey', 2500000, 'Available'),
-('PR001', 'Panoramic', 1500000, 'Booked'),
+('PR001', 'Panoramic', 1500000, 'Available'),
 ('PR002', 'Panoramic', 1500000, 'Available'),
 ('PR003', 'Panoramic', 1500000, 'Available'),
 ('PR004', 'Panoramic', 1500000, 'Available'),
@@ -173,7 +188,7 @@ ALTER TABLE `login`
 -- AUTO_INCREMENT for table `payment`
 --
 ALTER TABLE `payment`
-  MODIFY `id_payment` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
+  MODIFY `id_payment` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=45;
 
 --
 -- Constraints for dumped tables

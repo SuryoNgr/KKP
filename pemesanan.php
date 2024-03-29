@@ -1,3 +1,18 @@
+<?php
+include 'koneksi.php';
+
+
+$query = "SELECT room.tipe_room, COUNT(payment.id_room) AS total_reservasi
+          FROM room
+          LEFT JOIN payment ON room.id_room = payment.id_room
+          WHERE payment.checkin >= DATE_SUB(CURDATE(), INTERVAL 1 MONTH)
+          GROUP BY room.tipe_room
+          ORDER BY total_reservasi DESC
+          LIMIT 1";
+$result = mysqli_query($koneksi, $query);
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -50,7 +65,11 @@
    <section class="home" id="home">
 
       <div class="swiper home-slider">
-
+      <div class="swiper room-slider" id="room-slider">
+        <div class="swiper-wrapper">
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
          <div class="swiper-wrapper">
             <div class="swiper-slide slide" style="background: url(assets/images/index/home-slide2.png) no-repeat;">
                <div class="content">
@@ -87,7 +106,38 @@
 
    <!-- end -->
 
-  
+   <section class="room" id="room">
+      <h1 class="heading">Our Most Popular Room</h1>
+
+      <div class="swiper room-slider" id="room-slider">
+         <div class="swiper-wrapper">
+            <?php
+            if ($result && mysqli_num_rows($result) > 0) {
+                $row = mysqli_fetch_assoc($result);
+                if ($row) {
+            ?>
+                  <div class="swiper-slide slide">
+                     <div class="content">
+                        <h3><?php echo $row['tipe_room']; ?></h3>
+                        <p>Total Reservations: <?php echo $row['total_reservasi']; ?></p>
+                        <a href="#reservation" class="btn">Book Now</a>
+                     </div>
+                  </div>
+            <?php
+                } else {
+                    echo '<p>No data available</p>';
+                }
+            } else {
+               echo '<div class="swiper-slide slide">';
+               echo '<p>No popular room found</p>';
+               echo '</div>';
+            }
+            ?>
+         </div>
+         <div class="swiper-pagination"></div>
+      </div>
+   </section>
+
    <!-- about -->
 
    <section class="about" id="about">
