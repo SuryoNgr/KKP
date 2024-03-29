@@ -14,7 +14,7 @@ if (isset($_POST['submit'])) {
         echo '<b>Warning!</b> Username telah terdaftar';
     } else {
         $insert = $koneksi->query('INSERT INTO `login`(`nama_admin`, `username`, `password`, `notelp_admin`, `level`) VALUES("' . $name . '","' . $username . '", "' . 
-     $password . '", "' . $phone . '", "admin")');
+     $password . '", "' . $phone . '", "staff")');
 
         if ($insert) {
            echo '<script>alert("Pendaftaran berhasil!");</script>';

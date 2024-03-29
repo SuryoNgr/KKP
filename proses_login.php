@@ -21,13 +21,13 @@ if($cek > 0){
     $_SESSION['user_id'] = $data['id_admin'];
 
 
-    if($data['level'] == "admin"){
-
+    if($data['level'] == "staff"){
+        
         $_SESSION['username'] = $username;
-        $_SESSION['level'] = "admin";
+        $_SESSION['level'] = "staff";
         
 
-        header("location:admin/halaman_admin.php");
+        header("location:staff/halaman_staff.php");
         exit();
     }
     else if($data['level'] == "owner"){
@@ -39,6 +39,7 @@ if($cek > 0){
         header("location:owner/halaman_owner.php");
         exit();
     }
+    
     else{
 
         header("location:login.php?pesan=gagal");
