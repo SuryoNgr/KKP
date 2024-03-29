@@ -96,31 +96,34 @@
             </div>
             <div class="contactForm">
                 <h2>Contact with Us</h2>
-                <div class="formBox">
-                    <div class="inputBox w50">
-                        <input type="text" name="" required="">
-                        <span>First Name</span>
+                <form class="submit-to-google-sheet">
+                    <div class="formBox">
+                        <div class="inputBox w50">
+                            <input type="text" name="first_name" required="">
+                            <span>First Name</span>
+                        </div>
+                        <div class="inputBox w50">
+                            <input type="text" name="last_name" required="">
+                            <span>Last Name</span>
+                        </div>
+                        <div class="inputBox w50">
+                            <input type="email" name="email" required="">
+                            <span>Email Address</span>
+                        </div>
+                        <div class="inputBox w50">
+                            <input type="text" name="mobile_number" required="">
+                            <span>Mobile Number</span>
+                        </div>
+                        <div class="inputBox w100">
+                            <textarea name="message" required=""></textarea>
+                            <span>Write your message here...</span>
+                        </div>
+                        <div class="inputBox w100">
+                            <input type="submit" value="Send">
+                        </div>
                     </div>
-                    <div class="inputBox w50">
-                        <input type="text" required="">
-                        <span>Last Name</span>
-                    </div>
-                    <div class="inputBox w50">
-                        <input type="email" required="">
-                        <span>Email Address</span>
-                    </div>
-                    <div class="inputBox w50">
-                        <input type="text" required="">
-                        <span>Mobile Number</span>
-                    </div>
-                    <div class="inputBox w100">
-                        <textarea required=""></textarea>
-                        <span>Write your message here...</span>
-                    </div>
-                    <div class="inputBox w100">
-                        <input type="submit" value="Send">
-                    </div>
-                </div>
+                </form>
+                <span id="msg"></span>
             </div>
         </div>
     </section>

@@ -6,17 +6,20 @@ toggles.forEach(toggle => {
 	});
 });
 
-// SOCIAL PANEL JS
-const floating_btn = document.querySelector('.floating-btn');
-const close_btn = document.querySelector('.close-btn');
-const social_panel_container = document.querySelector('.social-panel-container');
+// Skrip untuk mengelola formulir dan pesan
+const scriptURL = 'https://script.google.com/macros/s/AKfycbz7FgWt4kfc-B6MD3m2s9_ZHZtgUHOLX2Xa4_WGEmvXMjkcRfmrTDdTfXkIH-URl_q7NQ/exec';
+const form = document.querySelector('.submit-to-google-sheet');
+const msg = document.getElementById("msg");
 
-floating_btn.addEventListener('click', () => {
-	social_panel_container.classList.toggle('visible')
+form.addEventListener('submit', e => {
+    e.preventDefault();
+    fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+        .then(response => {
+            msg.innerHTML = "Message sent successfully";
+            setTimeout(function () {
+                msg.innerHTML = "";
+            }, 5000);
+            form.reset();
+        })
+        .catch(error => console.error('Error!', error.message));
 });
-
-close_btn.addEventListener('click', () => {
-	social_panel_container.classList.remove('visible')
-});
-
-const API_URL = "https://be-2-bandung-16-production.up.railway.app/";
