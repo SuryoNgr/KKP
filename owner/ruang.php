@@ -7,34 +7,29 @@ if (!isset($_SESSION)) {
     }
 }
 
-// Inisialisasi variabel filter
 $filter = "";
-// Periksa apakah filter disimpan dalam session
+
 if (isset($_SESSION['room_filter'])) {
     $filter = $_SESSION['room_filter'];
 }
 
-if(isset($_POST['apply_filter'])) {
-    $selected_type = $_POST['room_type']; // Mengambil nilai yang benar dari dropdown
-    if ($selected_type != "all") {
-        $filter = "WHERE tipe_room = '$selected_type'";
-        // Simpan filter dalam session
-        $_SESSION['room_filter'] = $filter;
+$search_input = "";
+
+if(isset($_POST['search_btn'])) {
+    $search_input = $_POST['search_input'];
+    $search_condition = "WHERE id_room LIKE '%$search_input%' OR tipe_room LIKE '%$search_input%' OR harga_room LIKE '%$search_input%'";
+    if(empty($filter)) {
+        $filter = $search_condition;
     } else {
-        // Jika opsi "all" dipilih, hapus filter dari session
-        unset($_SESSION['room_filter']);
+        $filter .= " AND " . $search_condition;
     }
 }
 
-// Check if the "Reset Filter" button is clicked
 if(isset($_POST['reset_filter'])) {
-    // Hapus filter dari session
     unset($_SESSION['room_filter']);
-    // Set filter ke string kosong
     $filter = "";
 }
 
-// Menyusun kueri SQL dengan filter yang disimpan dalam session
 $sql = "SELECT * FROM room $filter ORDER BY harga_room ASC, id_room ASC";
 $result = $koneksi->query($sql);
 ?>
@@ -79,10 +74,14 @@ $result = $koneksi->query($sql);
 <?php include 'navbar.php' ?>
     <h2>Room Data</h2>
 
-    <button onclick="window.location.href='add_room.php'">Add Room</button>
-    <button class="fa fa-filter" onclick="togglePopup()">Filter</button>
+    <button class="btn btn-outline" onclick="window.location.href='add_room.php'">Add Room</button>
+    <button class="btn btn-outline" onclick="togglePopup()">Filter</button>
+        
+    <form method="post">
+        <button class="btn-sm btn-outline float-right" type="submit" name="search_btn">Search</button>
+        <input class="form-control-sm float-right" type="search" name="search_input" placeholder="Search" aria-label="Search">
+    </form>
 
-    <!-- Pop up -->
     <div id="popup" class="popup">
         <form method="post">
             <div class="dropdown">
@@ -132,7 +131,6 @@ $result = $koneksi->query($sql);
         $koneksi->close();
         ?>
     </table>
-    
 
     <script src="../js/owner.js"></script>
 
@@ -151,9 +149,9 @@ $result = $koneksi->query($sql);
 </script>
 
 <footer class="foot">
-<div class="footer-bottom">
-            <p>&copy; 2023 Your Company. All rights reserved.</p>
-          </div>
+    <div class="footer-bottom">
+        <p>&copy; 2023 Your Company. All rights reserved.</p>
+    </div>
 </footer>
 </body>
 </html>

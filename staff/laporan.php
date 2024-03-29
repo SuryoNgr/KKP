@@ -35,9 +35,33 @@
 
 
 <section>
+    <center>
     <h1>Laporan Pemesanan</h1>
-    <button class="btn btn-outline" onclick="printExternalPage()"><i class="fa-solid fa-print custom-icon"></i></button>
 
+    <?php 
+    $query = "SELECT * FROM payment";
+$result = mysqli_query($koneksi, $query);   
+    echo "<table cellspacing='0' cellpadding='5' border='1'>";
+    echo "<tr><th>Nomor Telephone</th><th>Nama</th><th>Nomor Rekening</th><th>Email</th><th>CheckIn</th><th>CheckOut</th><th>Nomor Ruangan</th><th>Total Bayaran</th></tr>";
+            while ($row = mysqli_fetch_assoc($result)) {
+    echo "<tr>";
+    
+    echo "<td>" . $row['notelp_pl'] . "</td>";
+    echo "<td>" . $row['nama_pl'] . "</td>";
+    echo "<td>" . $row['norek_pl'] . "</td>";
+    echo "<td>" . $row['email_pl'] . "</td>";
+    echo "<td>" . $row['checkin'] . "</td>";
+    echo "<td>" . $row['checkout'] . "</td>";
+    echo "<td>" . $row['id_room'] . "</td>";
+    echo "<td>" . $row['harga_total'] . "</td>";
+    echo "</tr>";
+}
+echo "</table>"; ?>
+   
+    </center>
+    <div style="padding: 20px;margin-left: 190px">
+         <button class="btn btn-outline" onclick="printExternalPage()"><i class="fa-solid fa-print custom-icon"></i></button>
+    </div>
 </section>
       
 
