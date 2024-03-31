@@ -15,6 +15,7 @@
                 <li><a href="halaman_staff.php">Home</a></li>
                 <li><a href="laporan.php">Laporan</a></li>
                 <li><a href="ruang.php">Kamar</a></li>
+                <li><a href="spk/kriteria.php">SPK</a></li>
             </ul>
             <div class="user-info">
                 <img src="../assets/images/user.jpg" alt="User Icon" class="user-icon">

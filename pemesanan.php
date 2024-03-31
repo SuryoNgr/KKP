@@ -1,14 +1,9 @@
 <?php
-include 'koneksi.php';
+include 'config.php';
 
 
-$query = "SELECT room.tipe_room, COUNT(payment.id_room) AS total_reservasi
-          FROM room
-          LEFT JOIN payment ON room.id_room = payment.id_room
-          WHERE payment.checkin >= DATE_SUB(CURDATE(), INTERVAL 1 MONTH)
-          GROUP BY room.tipe_room
-          ORDER BY total_reservasi DESC
-          LIMIT 1";
+$query = "SELECT alternatif.nama, ranking.nilai
+FROM alternatif JOIN ranking ON alternatif.id = ranking.id_alternatif;";
 $result = mysqli_query($koneksi, $query);
 ?>
 
@@ -107,36 +102,35 @@ $result = mysqli_query($koneksi, $query);
    <!-- end -->
 
    <section class="room" id="room">
-      <h1 class="heading">Our Most Popular Room</h1>
+    <h1 class="heading">Our Most Popular Room</h1>
 
-      <div class="swiper room-slider" id="room-slider">
-         <div class="swiper-wrapper">
+    <div class="swiper room-slider" id="room-slider">
+        <div class="swiper-wrapper">
             <?php
             if ($result && mysqli_num_rows($result) > 0) {
-                $row = mysqli_fetch_assoc($result);
-                if ($row) {
+                while ($row = mysqli_fetch_assoc($result)) {
             ?>
-                  <div class="swiper-slide slide">
-                     <div class="content">
-                        <h3><?php echo $row['tipe_room']; ?></h3>
-                        <p>Total Reservations: <?php echo $row['total_reservasi']; ?></p>
-                        <a href="#reservation" class="btn">Book Now</a>
-                     </div>
-                  </div>
+                    <div class="swiper-slide slide">
+                        <div class="content">
+                            <h3><?php echo $row['nama']; ?></h3>
+                            <p>Ranking Value: <?php echo $row['nilai']; ?></p>
+                            <!-- Anda dapat menambahkan informasi tambahan yang ingin Anda tampilkan di sini -->
+                            <a href="#reservation" class="btn">Book Now</a>
+                        </div>
+                    </div>
             <?php
-                } else {
-                    echo '<p>No data available</p>';
                 }
             } else {
-               echo '<div class="swiper-slide slide">';
-               echo '<p>No popular room found</p>';
-               echo '</div>';
+                echo '<div class="swiper-slide slide">';
+                echo '<p>No popular room found</p>';
+                echo '</div>';
             }
             ?>
-         </div>
-         <div class="swiper-pagination"></div>
-      </div>
-   </section>
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+</section>
+
 
    <!-- about -->
 
