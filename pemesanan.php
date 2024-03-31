@@ -114,7 +114,7 @@ $result = mysqli_query($koneksi, $query);
                         <div class="content">
                             <h3><?php echo $row['nama']; ?></h3>
                             <p>Ranking Value: <?php echo $row['nilai']; ?></p>
-                            <!-- Anda dapat menambahkan informasi tambahan yang ingin Anda tampilkan di sini -->
+                           
                             <a href="#reservation" class="btn">Book Now</a>
                         </div>
                     </div>
