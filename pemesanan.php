@@ -3,7 +3,8 @@ include 'config.php';
 
 
 $query = "SELECT alternatif.nama, ranking.nilai
-FROM alternatif JOIN ranking ON alternatif.id = ranking.id_alternatif;";
+FROM alternatif JOIN ranking ON alternatif.id = ranking.id_alternatif ORDER BY ranking.nilai DESC
+LIMIT 1";
 $result = mysqli_query($koneksi, $query);
 ?>
 
