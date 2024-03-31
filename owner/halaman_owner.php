@@ -61,7 +61,7 @@
         <!-- Footer-->
 <footer class="foot">
 <div class="footer-bottom">
-            <p>&copy; 2024 Your Company. All rights reserved.</p>
+            <p>&copy; 2024 XYZ Hotel. All rights reserved.</p>
           </div>
 </footer>
         <!-- Bootstrap core JS-->

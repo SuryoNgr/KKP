@@ -77,8 +77,6 @@ $result = mysqli_query($koneksi, $query);
                   <h3>XYZ Hotel</h3>
                </div>
             </div>
-            <div class="swiper-slide slide" style="background: url(assets/images/index/kodePromo1.png) no-repeat;">
-            </div>
             <div class="swiper-slide slide" style="background: url(assets/images/index/home-slide3.png) no-repeat;">
                <div class="content">
                   <h3>XYZ Hotel</h3>
@@ -88,8 +86,6 @@ $result = mysqli_query($koneksi, $query);
                <div class="content">
                   <h3>XYZ Hotel</h3>
                </div>
-            </div>
-            <div class="swiper-slide slide" style="background: url(assets/images/index/kodePromo2.png) no-repeat;">
             </div>
          </div>
 
@@ -101,36 +97,6 @@ $result = mysqli_query($koneksi, $query);
    </section>
 
    <!-- end -->
-
-   <section class="room" id="room">
-    <h1 class="heading">Our Most Popular Room</h1>
-
-    <div class="swiper room-slider" id="room-slider">
-        <div class="swiper-wrapper">
-            <?php
-            if ($result && mysqli_num_rows($result) > 0) {
-                while ($row = mysqli_fetch_assoc($result)) {
-            ?>
-                    <div class="swiper-slide slide">
-                        <div class="content">
-                            <h3><?php echo $row['nama']; ?></h3>
-                            <p>Ranking Value: <?php echo $row['nilai']; ?></p>
-                           
-                            <a href="#reservation" class="btn">Book Now</a>
-                        </div>
-                    </div>
-            <?php
-                }
-            } else {
-                echo '<div class="swiper-slide slide">';
-                echo '<p>No popular room found</p>';
-                echo '</div>';
-            }
-            ?>
-        </div>
-        <div class="swiper-pagination"></div>
-    </div>
-</section>
 
 
    <!-- about -->
@@ -234,6 +200,37 @@ $result = mysqli_query($koneksi, $query);
 
 
    </section>
+
+   <section class="room" id="room">
+    <h1 class="heading">Our Best Room</h1>
+
+    <div class="swiper room-slider" id="room-slider">
+        <div class="swiper-wrapper">
+            <?php
+            if ($result && mysqli_num_rows($result) > 0) {
+                while ($row = mysqli_fetch_assoc($result)) {
+            ?>
+                    <div class="swiper-slide slide">
+                        <div class="content">
+                           <br>
+                            <h3><?php echo $row['nama']; ?></h3>
+                            <p>The <?php echo $row['nama']; ?> is our current best and popular room based on various aspect such as facility, room view, price, room area, and guest review. Book now!</p>
+                           
+                            <a href="#reservation" class="btn">Book Now</a>
+                        </div>
+                    </div>
+            <?php
+                }
+            } else {
+                echo '<div class="swiper-slide slide">';
+                echo '<p>No popular room found</p>';
+                echo '</div>';
+            }
+            ?>
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+</section>
 
    <!-- end -->
 
