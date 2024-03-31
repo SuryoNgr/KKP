@@ -27,7 +27,7 @@
                 <li><a style="text-decoration:none" href="#information">Information</a>
                     <ul>
                         <li><a style="text-decoration:none" href="contact-us.php">Contact us</a></li>
-                        <li><a style="text-decoration:none" href="about-us.php">About us</a></li>
+                        <li><a style="text-decoration:none" href="artikel.php">About us</a></li>
                     </ul>
                 </li>
             </ul>
