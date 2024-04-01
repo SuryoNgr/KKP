@@ -3,7 +3,7 @@
 	$host = 'localhost';
 	$username = 'root';
 	$password = '';
-	$database = 'spk_ahp';
+	$database = 'bluehorizon';
 
 	$koneksi = mysqli_connect($host,$username,$password);
 
